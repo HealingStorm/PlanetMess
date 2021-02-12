@@ -8,6 +8,9 @@ public class PlanetSpawner : MonoBehaviour
 
     public GameObject planetPrefab;
 
+    private PlanetScript planetCloneScript;
+    private MeshRenderer planetCloneMeshRenderer;
+
     // Update is called once per frame
     void Update()
     {
@@ -15,19 +18,20 @@ public class PlanetSpawner : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             GameObject planetClone = Instantiate(planetPrefab);
+            planetCloneScript = planetClone.GetComponent<PlanetScript>();
+            planetCloneMeshRenderer = planetClone.GetComponent<MeshRenderer>();
 
             //taille random
-            planetClone.GetComponent<PlanetScript>().size = planetData.size[Random.Range(0, 3)];
-            Debug.Log(planetClone.GetComponent<PlanetScript>().size);
+            planetCloneScript.size = planetData.size[Random.Range(0, 3)];
+            planetClone.transform.localScale = new Vector3(planetCloneScript.size, planetCloneScript.size, planetCloneScript.size);
 
             //température random
-            planetClone.GetComponent<PlanetScript>().temperature = planetData.temperature[Random.Range(0, 3)];
-            Debug.Log(planetClone.GetComponent<PlanetScript>().temperature);
+            planetCloneScript.temperature = planetData.temperature[Random.Range(0, 3)];
+            planetCloneMeshRenderer.material = planetCloneScript.temperature;
 
 
             //compsition random
-            planetClone.GetComponent<PlanetScript>().composition = planetData.composition[Random.Range(0, 3)];
-            Debug.Log(planetClone.GetComponent<PlanetScript>().composition);
+            planetCloneScript.composition = planetData.composition[Random.Range(0, 3)];
         }
     }
 }

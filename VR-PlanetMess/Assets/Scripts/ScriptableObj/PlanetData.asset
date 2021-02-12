@@ -17,9 +17,9 @@ MonoBehaviour:
   - 0.1
   - 0.15
   temperature:
-  - Cold
-  - Temperate
-  - Hot
+  - {fileID: 2100000, guid: 0453a24c391f0ac4389f089e4a01bcf7, type: 2}
+  - {fileID: 2100000, guid: 81bff8edc0147994bafa6f71e80bee8b, type: 2}
+  - {fileID: 2100000, guid: 12bf50bf80aeb234baebc6980aa2083c, type: 2}
   composition:
   - Gaseous
   - Rocky
