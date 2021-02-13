@@ -9,4 +9,16 @@ public class PlanetScript : MonoBehaviour
     /*[HideInInspector]*/ public Material temperature;
     /*[HideInInspector]*/ public string composition;
 
+    private void Update()
+    {
+        //update de la taille
+        transform.localScale = new Vector3(size, size, size);
+
+        //update de la température
+        transform.GetComponent<MeshRenderer>().material = temperature;
+
+        //update de la composition
+        
+    }
+
 }

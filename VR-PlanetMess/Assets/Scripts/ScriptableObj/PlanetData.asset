@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: PlanetData
   m_EditorClassIdentifier: 
   size:
-  - 0.05
-  - 0.1
-  - 0.15
+  - 0.04
+  - 0.06
+  - 0.08
   temperature:
   - {fileID: 2100000, guid: 0453a24c391f0ac4389f089e4a01bcf7, type: 2}
   - {fileID: 2100000, guid: 81bff8edc0147994bafa6f71e80bee8b, type: 2}
