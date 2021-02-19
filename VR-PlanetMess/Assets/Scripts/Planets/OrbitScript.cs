@@ -12,28 +12,9 @@ public class OrbitScript : MonoBehaviour
     private void Start()
     {
         #region Assignation of each orbit[] GameObject
-        for (int i = 0; i < orbit.Length; i++)
-        {
-            if(i == 0)
-            {
-                orbit[0] = GameObject.FindGameObjectWithTag("SmallOrbit");
-            }
-
-            if (i == 1)
-            {
-                orbit[1] = GameObject.FindGameObjectWithTag("MediumOrbit");
-            }
-
-            if (i == 2)
-            {
-                orbit[2] = GameObject.FindGameObjectWithTag("BigOrbit");
-            }
-
-            if(orbit[i] == null)
-            {
-                return;
-            }
-        }
+        orbit[0] = transform.Find("Small Orbit").gameObject;
+        orbit[1] = transform.Find("Medium Orbit").gameObject;
+        orbit[2] = transform.Find("Big Orbit").gameObject;
         #endregion
     }
     private void Update()
