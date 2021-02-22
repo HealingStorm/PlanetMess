@@ -6,8 +6,8 @@ public class PlanetScript : MonoBehaviour
 {
     [Header("Attributes")]
     /*[HideInInspector]*/ public float size;
-    /*[HideInInspector]*/ public Material temperature;
-    /*[HideInInspector]*/ public string composition;
+    /*[HideInInspector]*/ public Material temp;
+    /*[HideInInspector]*/ public string compo;
 
     private void Update()
     {
@@ -15,7 +15,7 @@ public class PlanetScript : MonoBehaviour
         transform.localScale = new Vector3(size, size, size);
 
         //update de la température
-        transform.GetComponent<MeshRenderer>().material = temperature;
+        transform.GetComponent<MeshRenderer>().material = temp;
 
         //update de la composition
         
