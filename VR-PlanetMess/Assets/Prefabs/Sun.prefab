@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1559732341121170198}
   - component: {fileID: 1559732341121170199}
   - component: {fileID: 1559732341121170196}
-  - component: {fileID: 1559732341121170217}
   - component: {fileID: -949622641943960651}
   m_Layer: 0
   m_Name: Sun
@@ -97,18 +96,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1559732341121170217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1559732341121170194}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79b5432df5c20c1409ac477f24accc92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-949622641943960651
 MonoBehaviour:
   m_ObjectHideFlags: 0

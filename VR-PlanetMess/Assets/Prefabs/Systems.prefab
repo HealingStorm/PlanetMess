@@ -526,7 +526,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4646142320839960867}
   m_Layer: 0
-  m_Name: System Spawner
+  m_Name: Systems
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
