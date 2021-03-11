@@ -5,7 +5,7 @@ using UnityEngine;
 public class SunScript : MonoBehaviour
 {
     [Header("Attributes")]
-    /*[HideInInspector]*/ public float size;
+    /*[HideInInspector]*/ private float size;
 
     private void Update()
     {

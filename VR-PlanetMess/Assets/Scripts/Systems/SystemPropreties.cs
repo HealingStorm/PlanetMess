@@ -2,27 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SystemSpawner : MonoBehaviour
+[ExecuteInEditMode]
+public class SystemPropreties : MonoBehaviour
 {
-    private Transform[] systemSpawnPointTransform = new Transform[4];
+    /*private Transform[] systemSpawnPointTransform = new Transform[4];
     [Space(10)]
-    public GameObject systemPrefab;
+    public GameObject systemPrefab;*/
+
     [Space(10)]
     public GameObject sunPrefab;
     public SunData sunData;
-    private SunScript sunCloneScript;
-    [Space(10)]
+    [Range(0,2)]
+    public int size;
+
+    /*[Space(10)]
     public GameObject planetPrefab;
     public PlanetData planetData;
-    private PlanetScript planetCloneScript;
+    private PlanetScript planetCloneScript;*/
 
     private void Start()
     {
-        FindSystemsTransforms();
+        sunPrefab.transform.localScale = new Vector3(sunData.size[size], sunData.size[size], sunData.size[size]);
     }
+
     private void Update()
     {
-        //Tant qu'on a pas de système sur tous les 4 points, on essaye d'en faire spawn un
+
+        #region Vieux Code
+        /*//Tant qu'on a pas de système sur tous les 4 points, on essaye d'en faire spawn un
         while (transform.GetChild(0).transform.childCount < 1 ||
                transform.GetChild(1).transform.childCount < 1 ||
                transform.GetChild(2).transform.childCount < 1 ||
@@ -100,18 +107,19 @@ public class SystemSpawner : MonoBehaviour
                     }
                 }
             }
-        }
+        }*/
+        #endregion
     }
 
 
-    private void FindSystemsTransforms()
+    /*private void FindSystemsTransforms()
     {
         GameObject[] systemSpawnPoints = GameObject.FindGameObjectsWithTag("SystemSpawnPoint");
         for (int i = 0; i < systemSpawnPointTransform.Length; i++)
         {
             systemSpawnPointTransform[i] = systemSpawnPoints[i].transform;
         }
-    }
+    }*/
 
 
 }
