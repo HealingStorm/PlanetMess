@@ -349,6 +349,55 @@ MonoBehaviour:
   lookSpeedV: 2
   zoomSpeed: 2
   dragSpeed: 6
+--- !u!1 &1451111644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1451111646}
+  - component: {fileID: 1451111645}
+  m_Layer: 0
+  m_Name: Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1451111645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451111644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68b834f01b3489f41b689fe44a35d551, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialTimer: 5
+  minTimeToSpawn: 3
+  maxTimeToSpawn: 5
+  suns: []
+  spawnPoints: []
+  meteor: {fileID: 1559732341121170194, guid: a1f5a88faa1bf2c4ab82bd18f5120cb4, type: 3}
+--- !u!4 &1451111646
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451111644}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.419918, y: 1.636895, z: -1.1374602}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1711276587
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class MeteorBehaviour : MonoBehaviour
 {
-    public void ChaseSun(GameObject sunToChase)
-    {
+    public GameObject sunPosition;
 
+    public float followSpeed = 10;
+
+    private void Update()
+    {
+        this.transform.position = Vector3.Lerp(sunPosition.transform.position, this.transform.position, followSpeed * Time.deltaTime);
     }
 }
