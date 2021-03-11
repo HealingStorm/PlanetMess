@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SystemSpawnPoint
   - Sun
+  - Spawner
   layers:
   - Default
   - TransparentFX
