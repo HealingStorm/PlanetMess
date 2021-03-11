@@ -7,17 +7,20 @@ public class UIManager : MonoBehaviour
 {
     public GameObject OptionsMenuUI;
     public GameObject MainMenuUI;
+    public GameObject LevelSelectMenuUI;
     
     private void Start() 
     {
-        OptionsMenuUI.SetActive(false);
         MainMenuUI.SetActive(true);
+        OptionsMenuUI.SetActive(false);
+        LevelSelectMenuUI.SetActive(false);
 
     }
-    public void StartToPlay()
+    public void Play()
     {
-        //LoadScenePlay
         Debug.Log("I play the game!");
+        MainMenuUI.SetActive(false);
+        LevelSelectMenuUI.SetActive(true);
     }
 
     public void OptionsMenu()
@@ -36,6 +39,7 @@ public class UIManager : MonoBehaviour
     public void BackToMainMenu()
     {
         Debug.Log("Welcome back, ears better?");
+        LevelSelectMenuUI.SetActive(false);
         OptionsMenuUI.SetActive(false);
         MainMenuUI.SetActive(true);
     }
