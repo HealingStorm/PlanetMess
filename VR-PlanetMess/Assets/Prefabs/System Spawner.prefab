@@ -69,7 +69,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3511280672825758410}
-  - component: {fileID: 5452371762906950408}
+  - component: {fileID: 4086297243355431253}
   m_Layer: 0
   m_Name: Solar System Right
   m_TagString: Untagged
@@ -92,7 +92,7 @@ Transform:
   m_Father: {fileID: 4646142320839960867}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5452371762906950408
+--- !u!114 &4086297243355431253
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,7 +107,19 @@ MonoBehaviour:
   sunPrefab: {fileID: 1559732341121170194, guid: 44aa2f23183081b478d104b8cbfcef22,
     type: 3}
   sunData: {fileID: 11400000, guid: 1ad6b73f2dc81c542b4d0a3d0030d263, type: 2}
-  size: 0
+  sunSize: 0
+  planetPrefab: {fileID: 7000872252954043853, guid: 67906d061608b3049a6a49131efe781f,
+    type: 3}
+  planetData: {fileID: 11400000, guid: 89a93c93f35778249adce59f4929ab41, type: 2}
+  planet1Size: 0
+  planet1Temp: 0
+  planet1Compo: 0
+  planet2Size: 0
+  planet2Temp: 0
+  planet2Compo: 0
+  planet3Size: 0
+  planet3Temp: 0
+  planet3Compo: 0
 --- !u!1 &1023780649395431306
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,7 +129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7350215346508068818}
-  - component: {fileID: 689410720520732259}
+  - component: {fileID: 5368626918002416268}
   m_Layer: 0
   m_Name: Solar System Left
   m_TagString: Untagged
@@ -140,7 +152,7 @@ Transform:
   m_Father: {fileID: 4646142320839960867}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &689410720520732259
+--- !u!114 &5368626918002416268
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,7 +167,19 @@ MonoBehaviour:
   sunPrefab: {fileID: 1559732341121170194, guid: 44aa2f23183081b478d104b8cbfcef22,
     type: 3}
   sunData: {fileID: 11400000, guid: 1ad6b73f2dc81c542b4d0a3d0030d263, type: 2}
-  size: 0
+  sunSize: 0
+  planetPrefab: {fileID: 7000872252954043853, guid: 67906d061608b3049a6a49131efe781f,
+    type: 3}
+  planetData: {fileID: 11400000, guid: 89a93c93f35778249adce59f4929ab41, type: 2}
+  planet1Size: 0
+  planet1Temp: 0
+  planet1Compo: 0
+  planet2Size: 0
+  planet2Temp: 0
+  planet2Compo: 0
+  planet3Size: 0
+  planet3Temp: 0
+  planet3Compo: 0
 --- !u!1 &1027451283655338276
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,7 +317,19 @@ MonoBehaviour:
   sunPrefab: {fileID: 1559732341121170194, guid: 44aa2f23183081b478d104b8cbfcef22,
     type: 3}
   sunData: {fileID: 11400000, guid: 1ad6b73f2dc81c542b4d0a3d0030d263, type: 2}
-  size: 0
+  sunSize: 0
+  planetPrefab: {fileID: 7000872252954043853, guid: 67906d061608b3049a6a49131efe781f,
+    type: 3}
+  planetData: {fileID: 11400000, guid: 89a93c93f35778249adce59f4929ab41, type: 2}
+  planet1Size: 0
+  planet1Temp: 0
+  planet1Compo: 0
+  planet2Size: 0
+  planet2Temp: 0
+  planet2Compo: 0
+  planet3Size: 0
+  planet3Temp: 0
+  planet3Compo: 0
 --- !u!1 &3600391042031248049
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,7 +775,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5682124320177245527}
-  - component: {fileID: 4887634407690679624}
+  - component: {fileID: 5011567768032713212}
   m_Layer: 0
   m_Name: Solar System Back
   m_TagString: Untagged
@@ -762,7 +798,7 @@ Transform:
   m_Father: {fileID: 4646142320839960867}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4887634407690679624
+--- !u!114 &5011567768032713212
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -777,4 +813,16 @@ MonoBehaviour:
   sunPrefab: {fileID: 1559732341121170194, guid: 44aa2f23183081b478d104b8cbfcef22,
     type: 3}
   sunData: {fileID: 11400000, guid: 1ad6b73f2dc81c542b4d0a3d0030d263, type: 2}
-  size: 0
+  sunSize: 0
+  planetPrefab: {fileID: 7000872252954043853, guid: 67906d061608b3049a6a49131efe781f,
+    type: 3}
+  planetData: {fileID: 11400000, guid: 89a93c93f35778249adce59f4929ab41, type: 2}
+  planet1Size: 0
+  planet1Temp: 0
+  planet1Compo: 0
+  planet2Size: 0
+  planet2Temp: 0
+  planet2Compo: 0
+  planet3Size: 0
+  planet3Temp: 0
+  planet3Compo: 0
