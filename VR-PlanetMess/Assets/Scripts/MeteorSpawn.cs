@@ -27,7 +27,7 @@ public class MeteorSpawn : MonoBehaviour
         yield return new WaitForSeconds(initialTimer);
 
         Debug.Log("Initial Timer = " + initialTimer);
-        random = UnityEngine.Random.Range(minTimeToSpawn, maxTimeToSpawn);
+        random = Random.Range(minTimeToSpawn, maxTimeToSpawn);
 
         StartCoroutine(meteorTimer(random));
 
@@ -40,12 +40,12 @@ public class MeteorSpawn : MonoBehaviour
 
         Debug.Log("Timer = " + timer);
         spawnPoints = GameObject.FindGameObjectsWithTag("Spawner");
-        randomSpawnPoint = UnityEngine.Random.Range(0, 20);
+        randomSpawnPoint = Random.Range(0, 20);
         GameObject actualMeteor = Instantiate(meteor, spawnPoints[randomSpawnPoint].transform.position, spawnPoints[randomSpawnPoint].transform.rotation);
-        randomSun = UnityEngine.Random.Range(0, 4);
+        randomSun = Random.Range(0, 4);
         suns = GameObject.FindGameObjectsWithTag("Sun");
         actualMeteor.GetComponent<MeteorBehaviour>().sunPosition = suns[randomSun];
-        random = UnityEngine.Random.Range(minTimeToSpawn, maxTimeToSpawn);
+        random = Random.Range(minTimeToSpawn, maxTimeToSpawn);
 
         StartCoroutine(meteorTimer(random));
 
