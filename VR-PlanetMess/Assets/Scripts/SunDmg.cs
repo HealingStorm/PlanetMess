@@ -14,20 +14,9 @@ public class SunDmg : MonoBehaviour
             Debug.Log(hp);
             if(hp == 0)
             {
-                Destroy(this);
-            }
-        }
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Meteor"))
-        {
-            hp--;
-            Debug.Log(hp);
-            if (hp == 0)
-            {
-                Destroy(this);
+                Destroy(this.gameObject);
             }
         }
     }
 }
+

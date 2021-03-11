@@ -17,7 +17,7 @@ public class MeteorBehaviour : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Sun"))
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 }
