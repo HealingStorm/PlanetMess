@@ -103,11 +103,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7000872252954043853}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f481e1ffec55ef14399fb91c1dee9d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   size: 0
-  temperature: 
-  composition: 
+  temp: {fileID: 0}
+  compo: 

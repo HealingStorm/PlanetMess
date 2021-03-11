@@ -2,27 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteInEditMode]
 public class SystemPropreties : MonoBehaviour
 {
-    /*private Transform[] systemSpawnPointTransform = new Transform[4];
-    [Space(10)]
-    public GameObject systemPrefab;*/
-
-    [Space(10)]
     public GameObject sunPrefab;
     public SunData sunData;
+    [Header("0, petit, 1 moyen, 2 grand")]
     [Range(0,2)]
-    public int size;
+    public int sunSize;
 
-    /*[Space(10)]
+    [Space(50)]
     public GameObject planetPrefab;
     public PlanetData planetData;
-    private PlanetScript planetCloneScript;*/
+    [Header("0, petit, 1 moyen, 2 grand")]
+    [Range(0, 2)]
+    public int planetSize;
+    [Header("0, froid, 1 tempéré, 2 chaud")]
+    [Range(0, 2)]
+    public int planetTemp;
+    [Header("0, gazeux, 1 rocheux, 2 aquatique")]
+    [Range(0, 2)]
+    public int planetCompo;
 
     private void Start()
     {
-        sunPrefab.transform.localScale = new Vector3(sunData.size[size], sunData.size[size], sunData.size[size]);
+        GameObject sunPrefabClone = Instantiate(sunPrefab, transform.position, Quaternion.identity, transform);
+        sunPrefabClone.transform.localScale = new Vector3(sunData.size[sunSize], sunData.size[sunSize], sunData.size[sunSize]);
     }
 
     private void Update()
