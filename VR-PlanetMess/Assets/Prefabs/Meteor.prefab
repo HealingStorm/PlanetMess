@@ -109,4 +109,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sunPosition: {fileID: 0}
-  followSpeed: 10
+  followSpeed: 1

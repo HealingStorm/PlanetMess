@@ -10,6 +10,6 @@ public class MeteorBehaviour : MonoBehaviour
 
     private void Update()
     {
-        this.transform.position = Vector3.Lerp(sunPosition.transform.position, this.transform.position, followSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, sunPosition.transform.position, Time.deltaTime);
     }
 }
