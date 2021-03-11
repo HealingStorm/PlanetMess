@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - SystemSpawnPoint
+  - Sun
   layers:
   - Default
   - TransparentFX
