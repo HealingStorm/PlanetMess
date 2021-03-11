@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 1559732341121170199}
   - component: {fileID: 1559732341121170196}
   - component: {fileID: 1559732341121170217}
+  - component: {fileID: -949622641943960651}
+  - component: {fileID: 1384438201490692980}
+  - component: {fileID: -2452991418683872426}
   m_Layer: 0
   m_Name: Sun
   m_TagString: Sun
@@ -94,7 +97,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1559732341121170217
 MonoBehaviour:
@@ -108,3 +111,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b5432df5c20c1409ac477f24accc92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-949622641943960651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559732341121170194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e39035dadc86b44ea9fbac5023cf522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 3
+--- !u!65 &1384438201490692980
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559732341121170194}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &-2452991418683872426
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559732341121170194}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

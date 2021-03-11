@@ -12,4 +12,12 @@ public class MeteorBehaviour : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, sunPosition.transform.position, Time.deltaTime);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Sun"))
+        {
+            Destroy(this);
+        }
+    }
 }
