@@ -16,4 +16,9 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
     }
     #endregion
+
+    public bool isPlaying = true;
+
+    public float timer = 120;
+
 }
