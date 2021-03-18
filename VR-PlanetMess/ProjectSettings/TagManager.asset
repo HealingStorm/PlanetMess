@@ -8,6 +8,9 @@ TagManager:
   - Sun
   - Spawner
   - Meteor
+  - SmallOrbit
+  - MediumOrbit
+  - BigOrbit
   layers:
   - Default
   - TransparentFX

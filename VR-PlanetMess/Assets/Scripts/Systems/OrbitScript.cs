@@ -7,6 +7,7 @@ public class OrbitScript : MonoBehaviour
     private GameObject[] orbit = new GameObject[3];
     public int[] orbitSpeed = new int[3] { 45, 25, 10 };
     public int[] planetRotationSpeed = new int[3] { 30, 20, 10 };
+    private Transform[] planetStartingPos = new Transform[3];
 
 
     private void Start()
@@ -16,6 +17,10 @@ public class OrbitScript : MonoBehaviour
         orbit[1] = transform.Find("Medium Orbit Planet").gameObject;
         orbit[2] = transform.Find("Big Orbit Planet").gameObject;
         #endregion
+
+        planetStartingPos[0] = transform.Find("Small Orbit Planet");
+        planetStartingPos[1] = transform.Find("Medium Orbit Planet");
+        planetStartingPos[2] = transform.Find("Big Orbit Planet");
     }
     private void Update()
     {

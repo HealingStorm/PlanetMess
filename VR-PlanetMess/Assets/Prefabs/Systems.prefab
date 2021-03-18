@@ -72,9 +72,10 @@ GameObject:
   - component: {fileID: 2111392724978581603}
   - component: {fileID: 1911055352812976717}
   - component: {fileID: 3376674658094785622}
+  - component: {fileID: 3381093596012397129}
   m_Layer: 0
   m_Name: OrbitBig
-  m_TagString: Untagged
+  m_TagString: BigOrbit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4976,6 +4977,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899813561569654546}
   m_Mesh: {fileID: 0}
+--- !u!135 &3381093596012397129
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899813561569654546}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1020266703570317634
 GameObject:
   m_ObjectHideFlags: 0
@@ -5138,9 +5152,10 @@ GameObject:
   - component: {fileID: 7244776941110712446}
   - component: {fileID: 4808478337374265016}
   - component: {fileID: 8723897731126083127}
+  - component: {fileID: 1079170384885625350}
   m_Layer: 0
   m_Name: OrbitMedium
-  m_TagString: Untagged
+  m_TagString: MediumOrbit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10042,6 +10057,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485070939742691198}
   m_Mesh: {fileID: 0}
+--- !u!135 &1079170384885625350
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485070939742691198}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2514396478215214385
 GameObject:
   m_ObjectHideFlags: 0
@@ -10054,9 +10082,10 @@ GameObject:
   - component: {fileID: 4141958421486911614}
   - component: {fileID: 127043498357948125}
   - component: {fileID: 2213478455726526709}
+  - component: {fileID: 8309206976896401095}
   m_Layer: 0
   m_Name: OrbitSmall
-  m_TagString: Untagged
+  m_TagString: SmallOrbit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14958,6 +14987,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2514396478215214385}
   m_Mesh: {fileID: 0}
+--- !u!135 &8309206976896401095
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2514396478215214385}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2649380263720234563
 GameObject:
   m_ObjectHideFlags: 0
@@ -15231,9 +15273,10 @@ GameObject:
   - component: {fileID: 2239630186355403001}
   - component: {fileID: 714410667475324736}
   - component: {fileID: 3687989947499645613}
+  - component: {fileID: 3358851077831718994}
   m_Layer: 0
   m_Name: OrbitBig
-  m_TagString: Untagged
+  m_TagString: BigOrbit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20135,6 +20178,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3963760099410756240}
   m_Mesh: {fileID: 0}
+--- !u!135 &3358851077831718994
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3963760099410756240}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4050691602920148086
 GameObject:
   m_ObjectHideFlags: 0
@@ -20198,9 +20254,10 @@ GameObject:
   - component: {fileID: 2827669672121717600}
   - component: {fileID: 347497831707185369}
   - component: {fileID: 1972943216431719353}
+  - component: {fileID: 5777553604654396459}
   m_Layer: 0
   m_Name: OrbitSmall
-  m_TagString: Untagged
+  m_TagString: SmallOrbit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25102,6 +25159,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4326977991456785040}
   m_Mesh: {fileID: 0}
+--- !u!135 &5777553604654396459
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4326977991456785040}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4646142320839960865
 GameObject:
   m_ObjectHideFlags: 0
@@ -25148,9 +25218,10 @@ GameObject:
   - component: {fileID: 6134966844490857608}
   - component: {fileID: 1662962498244840245}
   - component: {fileID: 2159602777736238339}
+  - component: {fileID: 4864300183210428}
   m_Layer: 0
   m_Name: OrbitMedium
-  m_TagString: Untagged
+  m_TagString: MediumOrbit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30052,6 +30123,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5019538243560800483}
   m_Mesh: {fileID: 0}
+--- !u!135 &4864300183210428
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5019538243560800483}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5023233770961320387
 GameObject:
   m_ObjectHideFlags: 0
@@ -30256,9 +30340,10 @@ GameObject:
   - component: {fileID: 5816260387828741900}
   - component: {fileID: 6601013766661790835}
   - component: {fileID: 7178157341399361082}
+  - component: {fileID: 9001165378183592672}
   m_Layer: 0
   m_Name: OrbitMedium
-  m_TagString: Untagged
+  m_TagString: MediumOrbit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35160,6 +35245,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6708376380934358183}
   m_Mesh: {fileID: 0}
+--- !u!135 &9001165378183592672
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6708376380934358183}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6916033230182701904
 GameObject:
   m_ObjectHideFlags: 0
@@ -35202,9 +35300,10 @@ GameObject:
   - component: {fileID: 8166432366605640092}
   - component: {fileID: 4253624752054032726}
   - component: {fileID: 4001686515909974787}
+  - component: {fileID: 1223154601186431800}
   m_Layer: 0
   m_Name: OrbitMedium
-  m_TagString: Untagged
+  m_TagString: MediumOrbit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40106,6 +40205,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7625898242452078903}
   m_Mesh: {fileID: 0}
+--- !u!135 &1223154601186431800
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7625898242452078903}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7903550359861887210
 GameObject:
   m_ObjectHideFlags: 0
@@ -40178,9 +40290,10 @@ GameObject:
   - component: {fileID: 4788177808975644786}
   - component: {fileID: 9128738269707080336}
   - component: {fileID: 5727487646622444398}
+  - component: {fileID: 921349034417392700}
   m_Layer: 0
   m_Name: OrbitBig
-  m_TagString: Untagged
+  m_TagString: BigOrbit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45082,6 +45195,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8175655025333540949}
   m_Mesh: {fileID: 0}
+--- !u!135 &921349034417392700
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8175655025333540949}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8329127152245407383
 GameObject:
   m_ObjectHideFlags: 0
@@ -45094,9 +45220,10 @@ GameObject:
   - component: {fileID: 7014376872813795680}
   - component: {fileID: 58288194336268172}
   - component: {fileID: 8065392867067891600}
+  - component: {fileID: 2563783653684999352}
   m_Layer: 0
   m_Name: OrbitBig
-  m_TagString: Untagged
+  m_TagString: BigOrbit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49998,6 +50125,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8329127152245407383}
   m_Mesh: {fileID: 0}
+--- !u!135 &2563783653684999352
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8329127152245407383}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8582747980547065280
 GameObject:
   m_ObjectHideFlags: 0
@@ -50010,9 +50150,10 @@ GameObject:
   - component: {fileID: 5676572909491039073}
   - component: {fileID: 6446157423859069291}
   - component: {fileID: 6920360960201730659}
+  - component: {fileID: 6300536534656561690}
   m_Layer: 0
   m_Name: OrbitSmall
-  m_TagString: Untagged
+  m_TagString: SmallOrbit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54914,6 +55055,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8582747980547065280}
   m_Mesh: {fileID: 0}
+--- !u!135 &6300536534656561690
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8582747980547065280}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8742368204152843199
 GameObject:
   m_ObjectHideFlags: 0
@@ -54926,9 +55080,10 @@ GameObject:
   - component: {fileID: 196822346303339994}
   - component: {fileID: 4809216735601946561}
   - component: {fileID: 6705327429886445459}
+  - component: {fileID: 4670120623878806600}
   m_Layer: 0
   m_Name: OrbitSmall
-  m_TagString: Untagged
+  m_TagString: SmallOrbit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59830,3 +59985,16 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8742368204152843199}
   m_Mesh: {fileID: 0}
+--- !u!135 &4670120623878806600
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8742368204152843199}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
