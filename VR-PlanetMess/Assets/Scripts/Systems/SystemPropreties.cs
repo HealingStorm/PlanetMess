@@ -75,8 +75,4 @@ public class SystemPropreties : MonoBehaviour
         planet3.transform.GetComponent<MeshRenderer>().material = planetData.temp[planet3Temp];
     }
 
-    private void Update()
-    {
-        
-    }
 }

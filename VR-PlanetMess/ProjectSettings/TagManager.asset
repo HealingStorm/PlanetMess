@@ -11,6 +11,8 @@ TagManager:
   - SmallOrbit
   - MediumOrbit
   - BigOrbit
+  - AttachPoint
+  - Planet
   layers:
   - Default
   - TransparentFX
