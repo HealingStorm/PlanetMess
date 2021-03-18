@@ -11,9 +11,9 @@ public class UIManager : MonoBehaviour
     
     private void Start() 
     {
-        MainMenuUI.SetActive(true);
-        OptionsMenuUI.SetActive(false);
-        LevelSelectMenuUI.SetActive(false);
+        // MainMenuUI.SetActive(true);
+        // OptionsMenuUI.SetActive(false);
+        // LevelSelectMenuUI.SetActive(false);
 
     }
     public void Play()
