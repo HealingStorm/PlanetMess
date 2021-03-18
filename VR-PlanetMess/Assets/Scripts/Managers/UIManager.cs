@@ -43,4 +43,14 @@ public class UIManager : MonoBehaviour
         OptionsMenuUI.SetActive(false);
         MainMenuUI.SetActive(true);
     }
+
+    public void LevelOne()
+    {
+        Debug.Log("Niveau 1");
+    }
+
+    public void LevelTwo()
+    {
+        Debug.Log("Niveau 2");
+    }
 }
