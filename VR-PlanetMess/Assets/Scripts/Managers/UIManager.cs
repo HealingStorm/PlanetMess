@@ -44,13 +44,15 @@ public class UIManager : MonoBehaviour
         MainMenuUI.SetActive(true);
     }
 
-    public void LevelOne()
+    public void LoadTuto()
     {
-        Debug.Log("Niveau 1");
+        Debug.Log("Tu joues mais en fait c'est le tuto");
+        SceneManager.LoadScene("TutorialLevel");
     }
 
-    public void LevelTwo()
+    public void LoadLevelOne()
     {
-        Debug.Log("Niveau 2");
+        Debug.Log("Tu fais le tuto mais en fait c'est le jeu");
+        SceneManager.LoadScene("Level 1");
     }
 }
