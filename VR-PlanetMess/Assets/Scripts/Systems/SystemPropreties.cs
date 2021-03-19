@@ -65,14 +65,24 @@ public class SystemPropreties : MonoBehaviour
         GameObject planet1 = Instantiate(planetPrefab, orbit[0].position, Quaternion.identity, orbit[0]);
         planet1.transform.localScale = new Vector3(planetData.size[planet1Size], planetData.size[planet1Size], planetData.size[planet1Size]);
         planet1.transform.GetComponent<MeshRenderer>().material = planetData.temp[planet1Temp];
+        planet1.GetComponent<PlanetScript>().planetSizeIndex = planet1Size;
+        planet1.GetComponent<PlanetScript>().planetTemperatureIndex = planet1Temp;
+        planet1.GetComponent<PlanetScript>().planetCompositionIndex = planet1Compo;
 
         GameObject planet2 = Instantiate(planetPrefab, orbit[1].position, Quaternion.identity, orbit[1]);
         planet2.transform.localScale = new Vector3(planetData.size[planet2Size], planetData.size[planet2Size], planetData.size[planet2Size]);
         planet2.transform.GetComponent<MeshRenderer>().material = planetData.temp[planet2Temp];
+        planet2.GetComponent<PlanetScript>().planetSizeIndex = planet2Size;
+        planet2.GetComponent<PlanetScript>().planetTemperatureIndex = planet2Temp;
+        planet2.GetComponent<PlanetScript>().planetCompositionIndex = planet2Compo;
 
         GameObject planet3 = Instantiate(planetPrefab, orbit[2].position, Quaternion.identity, orbit[2]);
         planet3.transform.localScale = new Vector3(planetData.size[planet3Size], planetData.size[planet3Size], planetData.size[planet3Size]);
         planet3.transform.GetComponent<MeshRenderer>().material = planetData.temp[planet3Temp];
+        planet3.GetComponent<PlanetScript>().planetSizeIndex = planet3Size;
+        planet3.GetComponent<PlanetScript>().planetTemperatureIndex = planet3Temp;
+        planet3.GetComponent<PlanetScript>().planetCompositionIndex = planet3Compo;
+
     }
 
 }

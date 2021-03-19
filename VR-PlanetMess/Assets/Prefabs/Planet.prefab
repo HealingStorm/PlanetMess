@@ -48,6 +48,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26b77a6a61a21b34d8a487c55944bebd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionSecurity: 0
+  planetSizeIndex: 0
+  planetTemperatureIndex: 0
+  planetCompositionIndex: 0
+  orbitValidMaterial: {fileID: 2100000, guid: 589f6b670566f9f459ad9a70487b7fc0, type: 2}
+  orbitNeutralMaterial: {fileID: 2100000, guid: c0788fd0c21248c4a8d34bbc9f514a6b,
+    type: 2}
 --- !u!33 &3099474940310002729
 MeshFilter:
   m_ObjectHideFlags: 0
