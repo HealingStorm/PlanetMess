@@ -1084,7 +1084,7 @@ GameObject:
   - component: {fileID: 4086297243355431253}
   m_Layer: 0
   m_Name: Solar System Right
-  m_TagString: Untagged
+  m_TagString: System
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1144,7 +1144,7 @@ GameObject:
   - component: {fileID: 5368626918002416268}
   m_Layer: 0
   m_Name: Solar System Left
-  m_TagString: Untagged
+  m_TagString: System
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22774,7 +22774,7 @@ GameObject:
   - component: {fileID: 2828699776009246184}
   m_Layer: 0
   m_Name: Solar System Forward
-  m_TagString: Untagged
+  m_TagString: System
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51006,7 +51006,7 @@ GameObject:
   - component: {fileID: 5011567768032713212}
   m_Layer: 0
   m_Name: Solar System Back
-  m_TagString: Untagged
+  m_TagString: System
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

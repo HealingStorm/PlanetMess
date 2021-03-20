@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    //aussi mettre 
     public static ScoreManager _instance;
     private void Awake()
     {
@@ -18,7 +17,7 @@ public class ScoreManager : MonoBehaviour
         _instance = this;
         DontDestroyOnLoad(this.gameObject);
         #endregion
-
-
     }
+
+
 }

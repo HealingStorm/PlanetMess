@@ -5,15 +5,37 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject OptionsMenuUI;
-    public GameObject MainMenuUI;
-    public GameObject LevelSelectMenuUI;
-    
+    private GameManager gameManager;
+    private GameObject OptionsMenuUI;
+    private GameObject MainMenuUI;
+    private GameObject LevelSelectMenuUI;
+    #region Singlton:Profile
+
+    public static UIManager Instance;
+
+    void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
+    #endregion
     private void Start() 
     {
-        // MainMenuUI.SetActive(true);
-        // OptionsMenuUI.SetActive(false);
-        // LevelSelectMenuUI.SetActive(false);
+        gameManager = FindObjectOfType<GameManager>();
+
+        MainMenuUI = GameObject.FindGameObjectWithTag("MainMenuUI");
+        OptionsMenuUI = GameObject.FindGameObjectWithTag("OptionMenuUI");
+        LevelSelectMenuUI = GameObject.FindGameObjectWithTag("LevelSelectMenuUI");
+        if (MainMenuUI == null || OptionsMenuUI == null || LevelSelectMenuUI == null)
+        {
+            return;
+        }
+
+        MainMenuUI.SetActive(true);
+        OptionsMenuUI.SetActive(false);
+        LevelSelectMenuUI.SetActive(false);
 
     }
     public void Play()
@@ -48,6 +70,7 @@ public class UIManager : MonoBehaviour
     {
         Debug.Log("Tu joues mais en fait c'est le tuto");
         SceneManager.LoadScene("TutorialLevel");
+        gameManager.tutoLevelLoaded = true;
     }
 
     public void LoadLevelOne()

@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - SystemSpawnPoint
   - Sun
   - Spawner
   - Meteor
@@ -13,6 +12,10 @@ TagManager:
   - BigOrbit
   - AttachPoint
   - Planet
+  - MainMenuUI
+  - OptionMenuUI
+  - LevelSelectMenuUI
+  - System
   layers:
   - Default
   - TransparentFX

@@ -43,6 +43,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f85dc754b518fce43982f275a7955389, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlaying: 1
+  timer: 120
+  levelCompleted: 0
+  tutoLevelLoaded: 0
+  orbitNeutralMat: {fileID: 2100000, guid: c0788fd0c21248c4a8d34bbc9f514a6b, type: 2}
+  orbitValidMat: {fileID: 2100000, guid: 589f6b670566f9f459ad9a70487b7fc0, type: 2}
 --- !u!1 &4812066634575065860
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,9 +135,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 086e5549ea92f3748b10802cb6214eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OptionsMenuUI: {fileID: 0}
-  MainMenuUI: {fileID: 0}
-  LevelSelectMenuUI: {fileID: 0}
 --- !u!1 &8364956167966894357
 GameObject:
   m_ObjectHideFlags: 0
