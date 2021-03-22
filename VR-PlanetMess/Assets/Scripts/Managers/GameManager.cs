@@ -11,12 +11,14 @@ public class GameManager : MonoBehaviour
 
     public float timer = 120;
 
-    public bool levelCompleted;
+    private bool levelCompleted;
+
+    //[HideInInspector]
     public bool tutoLevelLoaded;
-    public bool inLevel;
+
+    private bool inLevel;
     private GameObject[] levelSystems;
-    public Material orbitNeutralMat;
-    public Material orbitValidMat;
+    private bool[] orbitsDone = new bool[3];
 
     #region Singlton:Profile
     void Awake()
@@ -42,25 +44,41 @@ public class GameManager : MonoBehaviour
         if(inLevel)
         {
             //check si le joueur a validé tout les orbites de chaque système
-            CheckAllInArray(levelSystems);
+            CheckAllSystemsOrbits();
         }
 
     }
-    public void CheckAllInArray(GameObject[] array)
+    public void CheckAllSystemsOrbits()
     {
-        for (int i = 0; i < array.Length; i++)
+        for (int i = 0; i < levelSystems.Length; i++)
         {
-            if (array[i].transform.Find("Orbits/OrbitSmall").GetComponent<MeshRenderer>().material == orbitNeutralMat)
+            //On check si tt les systèmes ont tt leurs orbites valides et ont fini la partie
+            for (int j = 0; j < orbitsDone.Length; j++)
             {
-                levelCompleted = false;
-                Debug.Log("NOT COMPLETE");
-                break;
+                if(orbitsDone[j] == false)
+                {
+                    levelCompleted = false;
+                    break;
+                }
+                else if (orbitsDone[j] == true)
+                {
+                    levelCompleted = true;
+                    inLevel = false;
+                    Debug.Log("LEVEL COMPLETE !");
+                    break;
+                }
             }
-            else if (array[i].transform.Find("Orbits/OrbitSmall").GetComponent<MeshRenderer>().material == orbitValidMat)
+            //On check si les 3 orbites de chaque système est valide
+            for (int k = 0; k < levelSystems[i].GetComponent<SystemPropreties>().orbitDone.Length; k++)
             {
-                levelCompleted = true;
-                inLevel = false;
-                Debug.Log("LEVEL COMPLETE !");
+                if (levelSystems[i].GetComponent<SystemPropreties>().orbitDone[k] == false)
+                {
+                    orbitsDone[k] = false;
+                }
+                else if (levelSystems[i].GetComponent<SystemPropreties>().orbitDone[k] == true)
+                {
+                    orbitsDone[k] = true;
+                }
             }
         }
     }

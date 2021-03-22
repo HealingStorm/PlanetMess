@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SystemPropreties : MonoBehaviour
 {
+    [HideInInspector]
+    public bool[] orbitDone = new bool[3];
     public GameObject sunPrefab;
     public SunData sunData;
     [Tooltip("0, petit, 1 moyen, 2 grand")]
