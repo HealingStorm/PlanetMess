@@ -20,6 +20,11 @@ public class GameManager : MonoBehaviour
     private GameObject[] levelSystems;
     private bool[] orbitsDone = new bool[3];
 
+    //[HideInInspector]
+    public bool dropSecurity;
+    //[HideInInspector]
+    public bool takeSecurity;
+
     #region Singlton:Profile
     void Awake()
     {
@@ -83,4 +88,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void OnPlanetDrop()
+    {
+        dropSecurity = true;
+    }
+
+    public void OnPlanetTake()
+    {
+        takeSecurity = true;
+    }
 }
