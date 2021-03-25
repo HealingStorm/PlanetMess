@@ -41,6 +41,7 @@ public class MeteorSpawn : MonoBehaviour
         Debug.Log("Timer = " + timer);
         spawnPoints = GameObject.FindGameObjectsWithTag("Spawner");
         randomSpawnPoint = Random.Range(0, 20);
+        FindObjectOfType<AudioManager>().Play("Meteor Spawn");
         GameObject actualMeteor = Instantiate(meteor, spawnPoints[randomSpawnPoint].transform.position, spawnPoints[randomSpawnPoint].transform.rotation);
         randomSun = Random.Range(0, 4);
         suns = GameObject.FindGameObjectsWithTag("Sun");

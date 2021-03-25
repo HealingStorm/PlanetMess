@@ -14,7 +14,12 @@ public class SunDmg : MonoBehaviour
             Debug.Log(hp);
             if(hp == 0)
             {
+                FindObjectOfType<AudioManager>().Play("Game Over");
                 Destroy(this.gameObject);
+            }
+            else
+            {
+                FindObjectOfType<AudioManager>().Play("Meteor Hit");
             }
         }
     }
