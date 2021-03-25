@@ -81,7 +81,6 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene("Level 1");
     }
 
-<<<<<<< HEAD
     public void ReturnToMainMenu()
     {
         Debug.Log("Bah alors on ragequit?");
@@ -100,10 +99,8 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
-=======
     public void PlaySoundEffect()
     {
         FindObjectOfType<AudioManager>().Play("UI Select");
     }
->>>>>>> ef968eafba28d8527e2c9364c83bb5196f70f5c8
 }

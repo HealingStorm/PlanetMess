@@ -845,6 +845,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 202364687, guid: ecdbf3dc6204e7a46943712ecfb94c12, type: 3}
+      propertyPath: m_TagString
+      value: LeftHand
+      objectReference: {fileID: 0}
     - target: {fileID: 502342292, guid: ecdbf3dc6204e7a46943712ecfb94c12, type: 3}
       propertyPath: m_InteractState.m_OnExit.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -964,9 +968,10 @@ PrefabInstance:
     - target: {fileID: 8621002261679836242, guid: ecdbf3dc6204e7a46943712ecfb94c12,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3935504948145885494, guid: ecdbf3dc6204e7a46943712ecfb94c12, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ecdbf3dc6204e7a46943712ecfb94c12, type: 3}
 --- !u!43 &829515024
 Mesh:
@@ -2678,6 +2683,25 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1948249463 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 202364687, guid: ecdbf3dc6204e7a46943712ecfb94c12,
+    type: 3}
+  m_PrefabInstance: {fileID: 819948147}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &1948249464
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948249463}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.25
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2000662854
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -40,6 +40,9 @@ public class PlanetScript : MonoBehaviour
         {
             cantGoInSystem[2] = true;
         }
+
+        lastParent = transform.parent;
+        lastPosition = transform.parent;
     }
 
     private void Update()
@@ -47,7 +50,6 @@ public class PlanetScript : MonoBehaviour
         //si on prend la planète
         if (gameManager.takeSecurity == true)
         {
-            Debug.Log("drop");
             //transform.parent = null;
             gameManager.takeSecurity = false;
         }
@@ -56,12 +58,12 @@ public class PlanetScript : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        SystemPropreties SystemPropretiesScript = other.transform.parent.parent.parent.GetComponent<SystemPropreties>();
-        /*
+        
         #region Check si la planète peut aller sur l'orbite
         //PETIT SOLEIL
         if (other.gameObject.tag == "SmallOrbit")
         {
+            SystemPropreties SystemPropretiesScript = other.transform.parent.parent.parent.GetComponent<SystemPropreties>();
             if (SystemPropretiesScript.sunSize == 0 && cantGoInSystem[0] != true)
             {
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitValidMaterial;
@@ -75,6 +77,7 @@ public class PlanetScript : MonoBehaviour
         }
         if (other.gameObject.tag == "MediumOrbit")
         {
+            SystemPropreties SystemPropretiesScript = other.transform.parent.parent.parent.GetComponent<SystemPropreties>();
             if (SystemPropretiesScript.sunSize == 0 && cantGoInSystem[0] != true)
             {
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitValidMaterial;
@@ -88,6 +91,7 @@ public class PlanetScript : MonoBehaviour
         }
         if (other.gameObject.tag == "BigOrbit")
         {
+            SystemPropreties SystemPropretiesScript = other.transform.parent.parent.parent.GetComponent<SystemPropreties>();
             if (SystemPropretiesScript.sunSize == 0 && cantGoInSystem[0] != true)
             {
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitValidMaterial;
@@ -102,6 +106,7 @@ public class PlanetScript : MonoBehaviour
         //MOYEN SOLEIL
         if (other.gameObject.tag == "SmallOrbit")
         {
+            SystemPropreties SystemPropretiesScript = other.transform.parent.parent.parent.GetComponent<SystemPropreties>();
             if (SystemPropretiesScript.sunSize == 1 && cantGoInSystem[1] != true)
             {
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitValidMaterial;
@@ -115,6 +120,7 @@ public class PlanetScript : MonoBehaviour
         }
         if (other.gameObject.tag == "MediumOrbit")
         {
+            SystemPropreties SystemPropretiesScript = other.transform.parent.parent.parent.GetComponent<SystemPropreties>();
             if (SystemPropretiesScript.sunSize == 1 && cantGoInSystem[1] != true)
             {
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitValidMaterial;
@@ -128,6 +134,7 @@ public class PlanetScript : MonoBehaviour
         }
         if (other.gameObject.tag == "BigOrbit")
         {
+            SystemPropreties SystemPropretiesScript = other.transform.parent.parent.parent.GetComponent<SystemPropreties>();
             if (SystemPropretiesScript.sunSize == 1 && cantGoInSystem[1] != true)
             {
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitValidMaterial;
@@ -142,6 +149,7 @@ public class PlanetScript : MonoBehaviour
         //GRAND SOLEIL
         if (other.gameObject.tag == "SmallOrbit")
         {
+            SystemPropreties SystemPropretiesScript = other.transform.parent.parent.parent.GetComponent<SystemPropreties>();
             if (SystemPropretiesScript.sunSize == 2 && cantGoInSystem[2] != true)
             {
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitValidMaterial;
@@ -155,6 +163,7 @@ public class PlanetScript : MonoBehaviour
         }
         if (other.gameObject.tag == "MediumOrbit")
         {
+            SystemPropreties SystemPropretiesScript = other.transform.parent.parent.parent.GetComponent<SystemPropreties>();
             if (SystemPropretiesScript.sunSize == 2 && cantGoInSystem[2] != true)
             {
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitValidMaterial;
@@ -168,6 +177,7 @@ public class PlanetScript : MonoBehaviour
         }
         if (other.gameObject.tag == "BigOrbit")
         {
+            SystemPropreties SystemPropretiesScript = other.transform.parent.parent.parent.GetComponent<SystemPropreties>();
             if (SystemPropretiesScript.sunSize == 2 && cantGoInSystem[2] != true)
             {
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitValidMaterial;
@@ -180,7 +190,7 @@ public class PlanetScript : MonoBehaviour
             }
         }
         #endregion
-        */
+        
         #region Snap des planètes sur un orbite
 
         //si on drop la planète
@@ -192,11 +202,11 @@ public class PlanetScript : MonoBehaviour
                 //Si on a aucun enfant on peut placer la planète qui a collidé
                 if (smallOrbitTransform.childCount == 0)
                 {
-                    Debug.Log("bruh");
                     transform.parent = smallOrbitTransform;
                     transform.position = new Vector3(smallOrbitTransform.position.x, smallOrbitTransform.position.y, smallOrbitTransform.position.z);
-                    /*lastPosition.position = transform.position;
-                    lastParent.parent = transform.parent;*/
+                    lastPosition.position = transform.position;
+                    lastParent.parent = transform.parent;
+                    gameManager.dropSecurity = false;
                 }
             }
             else if (other.gameObject.tag == "MediumOrbit")
@@ -207,8 +217,9 @@ public class PlanetScript : MonoBehaviour
                 {
                     transform.parent = mediumOrbitTransform;
                     transform.position = new Vector3(mediumOrbitTransform.position.x, mediumOrbitTransform.position.y, mediumOrbitTransform.position.z);
-                    /*lastPosition.position = transform.position;
-                    lastParent.parent = transform.parent;*/
+                    lastPosition.position = transform.position;
+                    lastParent.parent = transform.parent;
+                    gameManager.dropSecurity = false;
                 }
             }
             else if (other.gameObject.tag == "BigOrbit")
@@ -219,8 +230,9 @@ public class PlanetScript : MonoBehaviour
                 {
                     transform.parent = bigOrbitTransform;
                     transform.position = new Vector3(bigOrbitTransform.position.x, bigOrbitTransform.position.y, bigOrbitTransform.position.z);
-                    /*lastPosition.position = transform.position;
-                    lastParent.parent = transform.parent;*/
+                    lastPosition.position = transform.position;
+                    lastParent.parent = transform.parent;
+                    gameManager.dropSecurity = false;
                 }
             }
             else if (other.gameObject.tag == "PlanetStorage")
@@ -231,16 +243,17 @@ public class PlanetScript : MonoBehaviour
                 {
                     transform.parent = planetStorerTransform;
                     transform.position = new Vector3(planetStorerTransform.position.x, planetStorerTransform.position.y, planetStorerTransform.position.z);
-                    /*lastPosition.position = transform.position;
-                    lastParent.parent = transform.parent;*/
+                    lastPosition.position = transform.position;
+                    lastParent.parent = transform.parent;
+                    gameManager.dropSecurity = false;
                 }
             }
-            /*else
+            else
             {
+                transform.parent = lastParent;
                 transform.position = lastPosition.position;
-                transform.parent = lastParent.parent;
-            }*/
-            gameManager.dropSecurity = false;
+                gameManager.dropSecurity = false;
+            }
         }
         #endregion
 

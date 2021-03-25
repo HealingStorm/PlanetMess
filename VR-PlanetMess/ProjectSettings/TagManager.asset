@@ -17,6 +17,7 @@ TagManager:
   - LevelSelectMenuUI
   - System
   - PlanetStorage
+  - LeftHand
   layers:
   - Default
   - TransparentFX
