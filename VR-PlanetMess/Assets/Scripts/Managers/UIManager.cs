@@ -78,4 +78,9 @@ public class UIManager : MonoBehaviour
         Debug.Log("Tu fais le tuto mais en fait c'est le jeu");
         SceneManager.LoadScene("Level 1");
     }
+
+    public void PlaySoundEffect()
+    {
+        FindObjectOfType<AudioManager>().Play("UI Select");
+    }
 }
