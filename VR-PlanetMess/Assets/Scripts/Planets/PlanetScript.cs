@@ -47,7 +47,8 @@ public class PlanetScript : MonoBehaviour
         //si on prend la planète
         if (gameManager.takeSecurity == true)
         {
-            transform.parent = null;
+            Debug.Log("drop");
+            //transform.parent = null;
             gameManager.takeSecurity = false;
         }
 
@@ -56,6 +57,7 @@ public class PlanetScript : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         SystemPropreties SystemPropretiesScript = other.transform.parent.parent.parent.GetComponent<SystemPropreties>();
+        /*
         #region Check si la planète peut aller sur l'orbite
         //PETIT SOLEIL
         if (other.gameObject.tag == "SmallOrbit")
@@ -178,65 +180,66 @@ public class PlanetScript : MonoBehaviour
             }
         }
         #endregion
-
+        */
         #region Snap des planètes sur un orbite
 
         //si on drop la planète
         if (gameManager.dropSecurity == true)
         {
-                if (other.gameObject.tag == "SmallOrbit")
+            if (other.gameObject.tag == "SmallOrbit")
+            {
+                Transform smallOrbitTransform = other.transform.parent.parent.Find("Small Orbit Planet").transform;
+                //Si on a aucun enfant on peut placer la planète qui a collidé
+                if (smallOrbitTransform.childCount == 0)
                 {
-                    Transform smallOrbitTransform = other.transform.parent.parent.Find("Small Orbit Planet").transform;
-                    //Si on a aucun enfant on peut placer la planète qui a collidé
-                    if (smallOrbitTransform.childCount == 0)
-                    {
-                        transform.parent = smallOrbitTransform;
-                        transform.position = new Vector3(smallOrbitTransform.position.x, smallOrbitTransform.position.y, smallOrbitTransform.position.z);
-                        lastPosition.position = transform.position;
-                        lastParent.parent = transform.parent;
-                    }
+                    Debug.Log("bruh");
+                    transform.parent = smallOrbitTransform;
+                    transform.position = new Vector3(smallOrbitTransform.position.x, smallOrbitTransform.position.y, smallOrbitTransform.position.z);
+                    /*lastPosition.position = transform.position;
+                    lastParent.parent = transform.parent;*/
                 }
-                else if (other.gameObject.tag == "MediumOrbit")
+            }
+            else if (other.gameObject.tag == "MediumOrbit")
+            {
+                Transform mediumOrbitTransform = other.transform.parent.parent.Find("Medium Orbit Planet").transform;
+                //Si on a aucun enfant on peut placer la planète qui a collidé
+                if (mediumOrbitTransform.childCount == 0)
                 {
-                    Transform mediumOrbitTransform = other.transform.parent.parent.Find("Medium Orbit Planet").transform;
-                    //Si on a aucun enfant on peut placer la planète qui a collidé
-                    if (mediumOrbitTransform.childCount == 0)
-                    {
-                        transform.parent = mediumOrbitTransform;
-                        transform.position = new Vector3(mediumOrbitTransform.position.x, mediumOrbitTransform.position.y, mediumOrbitTransform.position.z);
-                        lastPosition.position = transform.position;
-                        lastParent.parent = transform.parent;
-                    }
+                    transform.parent = mediumOrbitTransform;
+                    transform.position = new Vector3(mediumOrbitTransform.position.x, mediumOrbitTransform.position.y, mediumOrbitTransform.position.z);
+                    /*lastPosition.position = transform.position;
+                    lastParent.parent = transform.parent;*/
                 }
-                else if (other.gameObject.tag == "BigOrbit")
+            }
+            else if (other.gameObject.tag == "BigOrbit")
+            {
+                Transform bigOrbitTransform = other.transform.parent.parent.Find("Big Orbit Planet").transform;
+                //Si on a aucun enfant on peut placer la planète qui a collidé
+                if (bigOrbitTransform.childCount == 0)
                 {
-                    Transform bigOrbitTransform = other.transform.parent.parent.Find("Big Orbit Planet").transform;
-                    //Si on a aucun enfant on peut placer la planète qui a collidé
-                    if (bigOrbitTransform.childCount == 0)
-                    {
-                        transform.parent = bigOrbitTransform;
-                        transform.position = new Vector3(bigOrbitTransform.position.x, bigOrbitTransform.position.y, bigOrbitTransform.position.z);
-                        lastPosition.position = transform.position;
-                        lastParent.parent = transform.parent;
-                    }
+                    transform.parent = bigOrbitTransform;
+                    transform.position = new Vector3(bigOrbitTransform.position.x, bigOrbitTransform.position.y, bigOrbitTransform.position.z);
+                    /*lastPosition.position = transform.position;
+                    lastParent.parent = transform.parent;*/
                 }
-                else if (other.gameObject.tag == "PlanetStorage")
+            }
+            else if (other.gameObject.tag == "PlanetStorage")
+            {
+                Transform planetStorerTransform = other.transform;
+                //Si on a aucun enfant on peut placer la planète qui a collidé
+                if (planetStorerTransform.childCount == 0)
                 {
-                    Transform planetStorerTransform = other.transform;
-                    //Si on a aucun enfant on peut placer la planète qui a collidé
-                    if (planetStorerTransform.childCount == 0)
-                    {
-                        transform.parent = planetStorerTransform;
-                        transform.position = new Vector3(planetStorerTransform.position.x, planetStorerTransform.position.y, planetStorerTransform.position.z);
-                        lastPosition.position = transform.position;
-                        lastParent.parent = transform.parent;
-                    }
+                    transform.parent = planetStorerTransform;
+                    transform.position = new Vector3(planetStorerTransform.position.x, planetStorerTransform.position.y, planetStorerTransform.position.z);
+                    /*lastPosition.position = transform.position;
+                    lastParent.parent = transform.parent;*/
                 }
-            else
+            }
+            /*else
             {
                 transform.position = lastPosition.position;
                 transform.parent = lastParent.parent;
-            }
+            }*/
             gameManager.dropSecurity = false;
         }
         #endregion
