@@ -40,6 +40,7 @@ public class UIManager : MonoBehaviour
         LevelSelectMenuUI.SetActive(false);
 
     }
+
     public void Play()
     {
         Debug.Log("I play the game!");
@@ -84,7 +85,7 @@ public class UIManager : MonoBehaviour
     public void ReturnToMainMenu()
     {
         Debug.Log("Bah alors on ragequit?");
-        PauseMenuUI.SetActive(false);
+        gameManager.isPaused = false;
         LevelCompleteMenuUI.SetActive(false);
         LevelSelectMenuUI.SetActive(false);
         OptionsMenuUI.SetActive(false);
@@ -96,7 +97,6 @@ public class UIManager : MonoBehaviour
     {
         Debug.Log("Bon la pause est finie on reprend");
         PauseMenuUI.SetActive(false);
-        Time.timeScale = 1;
     }
 
     public void PlaySoundEffect()

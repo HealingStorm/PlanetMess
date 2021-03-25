@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +13,12 @@ public class GameManager : MonoBehaviour
     public float timer = 120;
 
     private bool levelCompleted;
+
+    [HideInInspector]
+    public bool isPaused;
+
+    private GameObject PauseMenuUI;
+    private PlayerInput playerInputs;
 
     //[HideInInspector]
     public bool tutoLevelLoaded;
@@ -35,10 +42,13 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
-
+    private void Start() 
+    {
+        isPaused = false;
+    }
     private void Update()
     {
-        //On fetch les systèmes à check après
+        //On fetch les systï¿½mes ï¿½ check aprï¿½s
         if(tutoLevelLoaded)
         {
             levelSystems = GameObject.FindGameObjectsWithTag("System");
@@ -48,16 +58,17 @@ public class GameManager : MonoBehaviour
 
         if(inLevel)
         {
-            //check si le joueur a validé tout les orbites de chaque système
+            //check si le joueur a validï¿½ tout les orbites de chaque systï¿½me
             CheckAllSystemsOrbits();
         }
 
+        playerInputs.actions.FindAction("Pause Game").started += OnPause;
     }
     public void CheckAllSystemsOrbits()
     {
         for (int i = 0; i < levelSystems.Length; i++)
         {
-            //On check si tt les systèmes ont tt leurs orbites valides et ont fini la partie
+            //On check si tt les systï¿½mes ont tt leurs orbites valides et ont fini la partie
             for (int j = 0; j < orbitsDone.Length; j++)
             {
                 if(orbitsDone[j] == false)
@@ -73,7 +84,7 @@ public class GameManager : MonoBehaviour
                     break;
                 }
             }
-            //On check si les 3 orbites de chaque système est valide
+            //On check si les 3 orbites de chaque systï¿½me est valide
             for (int k = 0; k < levelSystems[i].GetComponent<SystemPropreties>().orbitDone.Length; k++)
             {
                 if (levelSystems[i].GetComponent<SystemPropreties>().orbitDone[k] == false)
@@ -97,4 +108,21 @@ public class GameManager : MonoBehaviour
     {
         takeSecurity = true;
     }
+
+    public void OnPause(InputAction.CallbackContext context) 
+    {   
+        if(isPaused == true)
+        {
+            Time.timeScale = 1;
+            PauseMenuUI.SetActive(false);
+            isPaused = false;
+        }
+        else
+        {
+            Time.timeScale = 0;
+            PauseMenuUI.SetActive(true);
+            isPaused = true;
+        }
+    }
+    
 }
