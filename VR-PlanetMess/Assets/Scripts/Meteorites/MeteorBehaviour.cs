@@ -19,5 +19,11 @@ public class MeteorBehaviour : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        if (collision.gameObject.CompareTag("LeftHand"))
+        {
+
+            FindObjectOfType<AudioManager>().Play("Meteor Parry");
+            Destroy(this.gameObject);
+        }
     }
 }
