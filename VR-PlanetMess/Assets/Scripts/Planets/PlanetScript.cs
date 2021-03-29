@@ -55,7 +55,7 @@ public class PlanetScript : MonoBehaviour
     {
         
         #region Check si la plan�te peut aller sur l'orbite
-        /*//PETIT SOLEIL
+        //PETIT SOLEIL
         if (other.gameObject.tag == "SmallOrbit")
         {
             SystemPropreties SystemPropretiesScript = other.transform.parent.parent.parent.GetComponent<SystemPropreties>();
@@ -183,7 +183,7 @@ public class PlanetScript : MonoBehaviour
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitNeutralMaterial;
                 other.transform.parent.parent.parent.GetComponent<SystemPropreties>().orbitDone[2] = false;
             }
-        }*/
+        }
         #endregion
         
         #region Snap des plan�tes sur un orbite

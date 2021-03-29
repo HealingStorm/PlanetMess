@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public bool isPaused;
 
     private GameObject PauseMenuUI;
-    private PlayerInput playerInputs;
+    private XRIDefaultInputActions playerInputs;
 
     //[HideInInspector]
     public bool tutoLevelLoaded;
@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
 
     private void Start() 
     {
+        playerInputs = new XRIDefaultInputActions();
         isPaused = false;
     }
     private void Update()
@@ -58,17 +59,16 @@ public class GameManager : MonoBehaviour
 
         if(inLevel)
         {
-            //check si le joueur a valid� tout les orbites de chaque syst�me
+            //check si le joueur a validé tout les orbites de chaque système
             CheckAllSystemsOrbits();
         }
-
-        playerInputs.actions.FindAction("Pause Game").started += OnPause;
+        playerInputs.XRILeftHand.PauseGame.started += OnPause;
     }
     public void CheckAllSystemsOrbits()
     {
         for (int i = 0; i < levelSystems.Length; i++)
         {
-            //On check si tt les syst�mes ont tt leurs orbites valides et ont fini la partie
+            //On check si tt les systèmes ont tt leurs orbites valides et ont fini la partie
             for (int j = 0; j < orbitsDone.Length; j++)
             {
                 if(orbitsDone[j] == false)
@@ -84,7 +84,7 @@ public class GameManager : MonoBehaviour
                     break;
                 }
             }
-            //On check si les 3 orbites de chaque syst�me est valide
+            //On check si les 3 orbites de chaque système est valide
             for (int k = 0; k < levelSystems[i].GetComponent<SystemPropreties>().orbitDone.Length; k++)
             {
                 if (levelSystems[i].GetComponent<SystemPropreties>().orbitDone[k] == false)
