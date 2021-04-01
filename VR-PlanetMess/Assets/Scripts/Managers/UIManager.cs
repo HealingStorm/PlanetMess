@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
     private GameObject MainMenuUI;
     private GameObject LevelSelectMenuUI;
     private GameObject PauseMenuUI;
-    private GameObject LevelCompleteMenuUI;
+    public GameObject LevelCompleteMenuUI;
     #region Singlton:Profile
 
     public static UIManager Instance;

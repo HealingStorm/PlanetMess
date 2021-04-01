@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour
         {
             //check si le joueur a validé tout les orbites de chaque système
             CheckAllSystemsOrbits();
+
         }
         playerInputs.XRILeftHand.PauseGame.started += OnPause;
     }
@@ -80,6 +81,7 @@ public class GameManager : MonoBehaviour
                 {
                     levelCompleted = true;
                     inLevel = false;
+                    //UIManager.Instance.
                     Debug.Log("LEVEL COMPLETE !");
                     break;
                 }
