@@ -18,7 +18,7 @@ public class SunDmg : MonoBehaviour
             Debug.Log(hp);
             if(hp == 0)
             {
-
+                GameManager.Instance.isDead = true;
                 FindObjectOfType<AudioManager>().Play("Game Over");
                 GameObject playerMort = Instantiate(playerDeath, GameObject.FindGameObjectWithTag("Player").transform.position, GameObject.FindGameObjectWithTag("Player").transform.rotation);
                 playerMort.transform.parent = null;
