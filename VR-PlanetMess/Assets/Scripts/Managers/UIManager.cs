@@ -7,7 +7,9 @@ public class UIManager : MonoBehaviour
 {
     private GameManager gameManager;
     private GameObject RuleMenuUI;
-    private GameObject MainMenuUI;
+    
+    [HideInInspector]
+    public GameObject MainMenuUI;
     private GameObject LevelSelectMenuUI;
     private GameObject PauseMenuUI;
     private GameObject controlsMenuUI;
@@ -15,10 +17,14 @@ public class UIManager : MonoBehaviour
     public GameObject LevelCompleteMenuUI;
     #region Singlton:Profile
 
-
+    public static UIManager Instance;
     void Awake()
-    {
-    }
+        {
+            if (Instance == null)
+                Instance = this;
+            else
+                Destroy(gameObject);
+        }
     #endregion
     private void Start() 
     {

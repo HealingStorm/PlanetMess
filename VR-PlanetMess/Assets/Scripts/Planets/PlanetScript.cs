@@ -191,6 +191,7 @@ public class PlanetScript : MonoBehaviour
         //si on drop la plan�te
         if (gameManager.dropSecurity == true)
         {
+            Debug.Log("bruh");
             if (other.gameObject.tag == "SmallOrbit")
             {
                 Debug.Log("smallorbit");
@@ -198,6 +199,7 @@ public class PlanetScript : MonoBehaviour
                 //Si on a aucun enfant on peut placer la plan�te qui a collid�
                 if (smallOrbitTransform.childCount == 0)
                 {
+                    Debug.Log("snap");
                     transform.parent = smallOrbitTransform;
                     transform.position = smallOrbitTransform.position;
                     gameManager.dropSecurity = false;
@@ -224,18 +226,6 @@ public class PlanetScript : MonoBehaviour
                 {
                     transform.parent = bigOrbitTransform;
                     transform.position = bigOrbitTransform.position;
-                    gameManager.dropSecurity = false;
-                }
-            }
-            else if (other.gameObject.tag == "PlanetStorage")
-            {
-                Debug.Log("storage");
-                Transform planetStorerTransform = other.transform;
-                //Si on a aucun enfant on peut placer la plan�te qui a collid�
-                if (planetStorerTransform.childCount == 0)
-                {
-                    transform.parent = planetStorerTransform;
-                    transform.position = planetStorerTransform.position;
                     gameManager.dropSecurity = false;
                 }
             }

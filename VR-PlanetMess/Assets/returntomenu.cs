@@ -13,7 +13,7 @@ public class returntomenu : MonoBehaviour
     public IEnumerator ReturnToMenu()
     {
         yield return new WaitForSeconds(5f);
-
+        UIManager.Instance.MainMenuUI.SetActive(true);
         SceneManager.LoadScene(0);
     }
 }
