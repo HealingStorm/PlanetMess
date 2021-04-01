@@ -15,16 +15,13 @@ public class UIManager : MonoBehaviour
     public GameObject LevelCompleteMenuUI;
     #region Singlton:Profile
 
-    public static UIManager Instance;
 
     void Awake()
     {
-        if (Instance == null)
-            Instance = this;
-        else {
-            Destroy(gameObject);
-        }
-
+    }
+    #endregion
+    private void Start() 
+    {
         gameManager = FindObjectOfType<GameManager>();
         RuleMenuUI = GameObject.FindGameObjectWithTag("OptionMenuUI");
         MainMenuUI = GameObject.FindGameObjectWithTag("MainMenuUI");
@@ -33,10 +30,6 @@ public class UIManager : MonoBehaviour
         LevelCompleteMenuUI = GameObject.FindGameObjectWithTag("LevelComplete");
         controlsMenuUI = GameObject.FindGameObjectWithTag("ControlsMenuUI");
 
-    }
-    #endregion
-    private void Start() 
-    {
         MainMenuUI.SetActive(true);
         RuleMenuUI.SetActive(false);
         LevelSelectMenuUI.SetActive(false);
@@ -96,7 +89,6 @@ public class UIManager : MonoBehaviour
         LevelSelectMenuUI.SetActive(false);
         RuleMenuUI.SetActive(false);
         MainMenuUI.SetActive(true);
-        SceneManager.LoadScene("MainMenu");
     }
 
     public void ResumeGame()

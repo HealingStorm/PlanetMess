@@ -8,14 +8,13 @@ public class UICanvasScript : MonoBehaviour
     #region Singlton:Profile
     void Awake()
     {
-        if (Instance == null)
-            Instance = this;
-        else
-            Destroy(gameObject);
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(this.gameObject);
     }
     #endregion
-    void Start()
-    {
-        DontDestroyOnLoad(this);
-    }
 }
