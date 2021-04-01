@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public UIManager UIManager;
 
+    public bool isDead = false;
+
     #region Singlton:Profile
     void Awake()
     {
