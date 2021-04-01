@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
 
     public bool isPlaying = true;
 
@@ -32,13 +31,12 @@ public class GameManager : MonoBehaviour
     //[HideInInspector]
     public bool takeSecurity;
 
+    [HideInInspector]
+    public UIManager UIManager;
+
     #region Singlton:Profile
     void Awake()
     {
-        if (Instance == null)
-            Instance = this;
-        else
-            Destroy(gameObject);
     }
     #endregion
 
@@ -46,6 +44,7 @@ public class GameManager : MonoBehaviour
     {
         playerInputs = new XRIDefaultInputActions();
         isPaused = false;
+        UIManager = GameObject.Find("UIManager").GetComponent<UIManager>();
     }
     private void Update()
     {
@@ -79,8 +78,10 @@ public class GameManager : MonoBehaviour
                 else if (orbitsDone[j] == true)
                 {
                     levelCompleted = true;
+                    tutoLevelLoaded = false;
                     inLevel = false;
-                    UIManager.Instance.LevelCompleteMenuUI.SetActive(true);
+                    //SceneManager.LoadScene("MainMenu");
+                    //UIManager.LevelCompleteMenuUI.SetActive(true);
                     Debug.Log("LEVEL COMPLETE !");
                     break;
                 }
