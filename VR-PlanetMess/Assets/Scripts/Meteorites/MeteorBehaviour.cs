@@ -12,7 +12,10 @@ public class MeteorBehaviour : MonoBehaviour
 
     private void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, sunPosition.transform.position, Time.deltaTime);
+        if (GameManager.Instance.isDead == false)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, sunPosition.transform.position, Time.deltaTime);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -39,17 +39,39 @@ public class MeteorSpawn : MonoBehaviour
     {
         yield return new WaitForSeconds(timer);
 
-        Debug.Log("Timer = " + timer);
-        spawnPoints = GameObject.FindGameObjectsWithTag("Spawner");
-        randomSpawnPoint = Random.Range(0, 20);
-        FindObjectOfType<AudioManager>().Play("Meteor Spawn");
-        GameObject actualMeteor = Instantiate(meteor, spawnPoints[randomSpawnPoint].transform.position, spawnPoints[randomSpawnPoint].transform.rotation);
-        randomSun = Random.Range(0, 4);
-        suns = GameObject.FindGameObjectsWithTag("Sun");
-        actualMeteor.GetComponent<MeteorBehaviour>().sunPosition = suns[randomSun];
-        random = Random.Range(minTimeToSpawn, maxTimeToSpawn);
+        if (GameManager.Instance.isDead == false)
+        {
+            Debug.Log("Timer = " + timer);
+            if (GameManager.Instance.isDead == false)
+            {
+                spawnPoints = GameObject.FindGameObjectsWithTag("Spawner");
+            }
+            if (GameManager.Instance.isDead == false)
+            {
+                randomSpawnPoint = Random.Range(0, 20);
+            }
+            if (GameManager.Instance.isDead == false)
+            {
+                FindObjectOfType<AudioManager>().Play("Meteor Spawn");
+            }
+            if (GameManager.Instance.isDead == false)
+            {
+                GameObject actualMeteor = Instantiate(meteor, spawnPoints[randomSpawnPoint].transform.position, spawnPoints[randomSpawnPoint].transform.rotation);
 
-        StartCoroutine(meteorTimer(random));
+                randomSun = Random.Range(0, 4);
+                suns = GameObject.FindGameObjectsWithTag("Sun");
+                if (GameManager.Instance.isDead == false)
+                {
+                    actualMeteor.GetComponent<MeteorBehaviour>().sunPosition = suns[randomSun];
+                }
+                }
+            if (GameManager.Instance.isDead == false)
+            {
+                random = Random.Range(minTimeToSpawn, maxTimeToSpawn);
+            }
+
+            StartCoroutine(meteorTimer(random));
+        }
 
         yield return 0;
     }

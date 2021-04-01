@@ -36,10 +36,17 @@ public class GameManager : MonoBehaviour
 
     public bool isDead = false;
 
+    public static GameManager Instance;
+
     #region Singlton:Profile
+
     void Awake()
-    {
-    }
+        {
+            if (Instance == null)
+                Instance = this;
+            else
+                Destroy(gameObject);
+        }
     #endregion
 
     private void Start() 
