@@ -71,6 +71,7 @@ public class UIManager : MonoBehaviour
         LevelSelectMenuUI.SetActive(false);
         RuleMenuUI.SetActive(false);
         MainMenuUI.SetActive(true);
+        controlsMenuUI.SetActive(false);
     }
 
     public void LoadTuto()
@@ -107,5 +108,11 @@ public class UIManager : MonoBehaviour
     public void PlaySoundEffect()
     {
         FindObjectOfType<AudioManager>().Play("UI Select");
+    }
+
+    public void ControlsMenuButton()
+    {
+        controlsMenuUI.SetActive(true);
+        RuleMenuUI.SetActive(false);
     }
 }
