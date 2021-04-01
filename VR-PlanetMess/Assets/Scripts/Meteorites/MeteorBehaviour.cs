@@ -8,6 +8,8 @@ public class MeteorBehaviour : MonoBehaviour
 
     public float followSpeed = 10;
 
+    public GameObject meteorVfx;
+
     private void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, sunPosition.transform.position, Time.deltaTime);
@@ -23,6 +25,9 @@ public class MeteorBehaviour : MonoBehaviour
         {
 
             FindObjectOfType<AudioManager>().Play("Meteor Parry");
+            GameObject explosion = Instantiate(meteorVfx, transform.position, transform.rotation);
+            Destroy(explosion, 7f);
+            explosion.transform.parent = null;
             Destroy(this.gameObject);
         }
     }
