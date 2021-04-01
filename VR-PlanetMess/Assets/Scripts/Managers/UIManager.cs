@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     private GameManager gameManager;
-    private GameObject OptionsMenuUI;
-    private GameObject MainMenuUI;
-    private GameObject LevelSelectMenuUI;
-    private GameObject PauseMenuUI;
-    private GameObject LevelCompleteMenuUI;
+    public GameObject OptionsMenuUI;
+    public GameObject MainMenuUI;
+    public GameObject LevelSelectMenuUI;
+    public GameObject PauseMenuUI;
+    public GameObject LevelCompleteMenuUI;
     #region Singlton:Profile
 
     public static UIManager Instance;
@@ -27,13 +27,6 @@ public class UIManager : MonoBehaviour
     {
         gameManager = FindObjectOfType<GameManager>();
 
-        MainMenuUI = GameObject.FindGameObjectWithTag("MainMenuUI");
-        OptionsMenuUI = GameObject.FindGameObjectWithTag("OptionMenuUI");
-        LevelSelectMenuUI = GameObject.FindGameObjectWithTag("LevelSelectMenuUI");
-        if (MainMenuUI == null || OptionsMenuUI == null || LevelSelectMenuUI == null)
-        {
-            return;
-        }
 
         MainMenuUI.SetActive(true);
         OptionsMenuUI.SetActive(false);
