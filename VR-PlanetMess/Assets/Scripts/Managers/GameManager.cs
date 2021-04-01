@@ -54,7 +54,6 @@ public class GameManager : MonoBehaviour
         {
             levelSystems = GameObject.FindGameObjectsWithTag("System");
             inLevel = true;
-            tutoLevelLoaded = false;
         }
 
         if(inLevel)
