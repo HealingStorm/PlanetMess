@@ -18,6 +18,8 @@ TagManager:
   - System
   - PlanetStorage
   - LeftHand
+  - PauseMenu
+  - LevelComplete
   layers:
   - Default
   - TransparentFX

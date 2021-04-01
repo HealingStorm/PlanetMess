@@ -6,10 +6,11 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     private GameManager gameManager;
-    public GameObject OptionsMenuUI;
-    public GameObject MainMenuUI;
-    public GameObject LevelSelectMenuUI;
-    public GameObject PauseMenuUI;
+    private GameObject RuleMenuUI;
+    private GameObject MainMenuUI;
+    private GameObject LevelSelectMenuUI;
+    private GameObject PauseMenuUI;
+    [HideInInspector]
     public GameObject LevelCompleteMenuUI;
     #region Singlton:Profile
 
@@ -26,10 +27,14 @@ public class UIManager : MonoBehaviour
     private void Start() 
     {
         gameManager = FindObjectOfType<GameManager>();
-
+        RuleMenuUI = GameObject.FindGameObjectWithTag("OptionMenuUI");
+        MainMenuUI = GameObject.FindGameObjectWithTag("MainMenuUI");
+        LevelSelectMenuUI = GameObject.FindGameObjectWithTag("LevelSelectMenuUI");
+        PauseMenuUI = GameObject.FindGameObjectWithTag("PauseMenu");
+        LevelCompleteMenuUI = GameObject.FindGameObjectWithTag("LevelComplete");
 
         MainMenuUI.SetActive(true);
-        OptionsMenuUI.SetActive(false);
+        RuleMenuUI.SetActive(false);
         LevelSelectMenuUI.SetActive(false);
 
     }
@@ -44,7 +49,7 @@ public class UIManager : MonoBehaviour
     public void OptionsMenu()
     {
         Debug.Log("AAAAAAAAAH TURN THE VOLUME DOOOOOWN");
-        OptionsMenuUI.SetActive(true);
+        RuleMenuUI.SetActive(true);
         MainMenuUI.SetActive(false);
         //OptionsScreen actif
     }
@@ -58,7 +63,7 @@ public class UIManager : MonoBehaviour
     {
         Debug.Log("Welcome back, ears better?");
         LevelSelectMenuUI.SetActive(false);
-        OptionsMenuUI.SetActive(false);
+        RuleMenuUI.SetActive(false);
         MainMenuUI.SetActive(true);
     }
 
@@ -81,7 +86,7 @@ public class UIManager : MonoBehaviour
         gameManager.isPaused = false;
         LevelCompleteMenuUI.SetActive(false);
         LevelSelectMenuUI.SetActive(false);
-        OptionsMenuUI.SetActive(false);
+        RuleMenuUI.SetActive(false);
         MainMenuUI.SetActive(true);
         SceneManager.LoadScene("MainMenu");
     }
