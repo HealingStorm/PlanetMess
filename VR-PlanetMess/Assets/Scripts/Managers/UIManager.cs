@@ -76,6 +76,7 @@ public class UIManager : MonoBehaviour
     public void LoadTuto()
     {
         Debug.Log("Tu joues mais en fait c'est le tuto");
+        LevelSelectMenuUI.SetActive(false);
         SceneManager.LoadScene("Jaipeteletuto");
         gameManager.tutoLevelLoaded = true;
     }
