@@ -11,9 +11,7 @@ public class PlanetScript : MonoBehaviour
     [HideInInspector]
     public int planetSizeIndex;
     [HideInInspector]
-    public int planetTemperatureIndex;
-    [HideInInspector]
-    public int planetCompositionIndex;
+    public int planetTempCompoIndex;
 
     public Material orbitValidMaterial;
     public Material orbitNeutralMaterial;
@@ -26,15 +24,15 @@ public class PlanetScript : MonoBehaviour
     private void Start()
     {
 
-        if (planetSizeIndex == 2 || planetTemperatureIndex == 2)
+        if (planetSizeIndex == 2 || planetTempCompoIndex == 2 || planetTempCompoIndex == 5 || planetTempCompoIndex == 8)
         {
             cantGoInSystem[0] = true;
         }
-        if(planetSizeIndex == 0 || planetCompositionIndex == 0)
+        if(planetSizeIndex == 0 || planetTempCompoIndex == 0 || planetTempCompoIndex == 1 || planetTempCompoIndex == 2)
         {
             cantGoInSystem[1] = true;
         }
-        if (planetTemperatureIndex == 0 || planetCompositionIndex == 2)
+        if (planetTempCompoIndex == 0 || planetTempCompoIndex == 3 || planetTempCompoIndex == 6 || planetTempCompoIndex == 7 || planetTempCompoIndex == 8)
         {
             cantGoInSystem[2] = true;
         }

@@ -15,7 +15,7 @@ public class SunDmg : MonoBehaviour
         if (collision.gameObject.CompareTag("Meteor"))
         {
             hp--;
-            Debug.Log(hp);
+            //Debug.Log(hp);
             if(hp == 0)
             {
                 GameManager.Instance.isDead = true;

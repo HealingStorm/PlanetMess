@@ -27,7 +27,7 @@ public class MeteorSpawn : MonoBehaviour
     {
         yield return new WaitForSeconds(initialTimer);
 
-        Debug.Log("Initial Timer = " + initialTimer);
+        //Debug.Log("Initial Timer = " + initialTimer);
         random = Random.Range(minTimeToSpawn, maxTimeToSpawn);
 
         StartCoroutine(meteorTimer(random));
@@ -41,7 +41,7 @@ public class MeteorSpawn : MonoBehaviour
 
         if (GameManager.Instance.isDead == false)
         {
-            Debug.Log("Timer = " + timer);
+            //Debug.Log("Timer = " + timer);
             if (GameManager.Instance.isDead == false)
             {
                 spawnPoints = GameObject.FindGameObjectsWithTag("Spawner");

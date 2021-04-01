@@ -48,7 +48,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26b77a6a61a21b34d8a487c55944bebd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionSecurity: 0
   planetSizeIndex: 0
   planetTemperatureIndex: 0
   planetCompositionIndex: 0
@@ -168,19 +167,7 @@ MonoBehaviour:
       m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -2244459312181960756}
-        m_TargetAssemblyTypeName: PlanetScript, Assembly-CSharp
-        m_MethodName: OnPlanetDrop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_Activated:
     m_PersistentCalls:
       m_Calls: []

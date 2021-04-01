@@ -16,11 +16,13 @@ MonoBehaviour:
   - 0.04
   - 0.06
   - 0.08
-  temp:
-  - {fileID: 2100000, guid: 0453a24c391f0ac4389f089e4a01bcf7, type: 2}
-  - {fileID: 2100000, guid: 81bff8edc0147994bafa6f71e80bee8b, type: 2}
-  - {fileID: 2100000, guid: 12bf50bf80aeb234baebc6980aa2083c, type: 2}
-  compo:
-  - Gaseous
-  - Rocky
-  - Aquatic
+  temp_compo:
+  - {fileID: 2100000, guid: 41736e1c8a9e6a94ea0e5650890fd3e4, type: 2}
+  - {fileID: 2100000, guid: e9430d5308759fc4190b62f837919b7a, type: 2}
+  - {fileID: 2100000, guid: a2f23e1c9b215584790896803e83e24e, type: 2}
+  - {fileID: 2100000, guid: e0de03fdd95b46c48b2beea488f61d11, type: 2}
+  - {fileID: 2100000, guid: 14be00162ddf7d6448ec26f0acb2800e, type: 2}
+  - {fileID: 2100000, guid: 6c83682edf2093b43bffe9bbdf39bb0f, type: 2}
+  - {fileID: 2100000, guid: 76e408948fc1b7a42a15ed9d39e4b54e, type: 2}
+  - {fileID: 2100000, guid: e00b67005e31db949bf6d8b8efc8acf2, type: 2}
+  - {fileID: 2100000, guid: c7a88750c124745418dd6d2b78dd6d95, type: 2}

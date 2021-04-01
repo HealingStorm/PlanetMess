@@ -42,18 +42,17 @@ public class UIManager : MonoBehaviour
         PauseMenuUI.SetActive(false);
         LevelCompleteMenuUI.SetActive(false);
         controlsMenuUI.SetActive(false);
+
     }
 
     public void Play()
     {
-        Debug.Log("I play the game!");
         MainMenuUI.SetActive(false);
         LevelSelectMenuUI.SetActive(true);
     }
 
     public void OptionsMenu()
     {
-        Debug.Log("AAAAAAAAAH TURN THE VOLUME DOOOOOWN");
         RuleMenuUI.SetActive(true);
         MainMenuUI.SetActive(false);
         //OptionsScreen actif
@@ -61,12 +60,10 @@ public class UIManager : MonoBehaviour
 
     public void QuitGame()
     {
-        Debug.Log("So long hey Bowser");
         Application.Quit();    
     }
     public void BackToMainMenu()
     {
-        Debug.Log("Welcome back, ears better?");
         LevelSelectMenuUI.SetActive(false);
         RuleMenuUI.SetActive(false);
         MainMenuUI.SetActive(true);
@@ -75,7 +72,6 @@ public class UIManager : MonoBehaviour
 
     public void LoadTuto()
     {
-        Debug.Log("Tu joues mais en fait c'est le tuto");
         LevelSelectMenuUI.SetActive(false);
         SceneManager.LoadScene("Jaipeteletuto");
         gameManager.tutoLevelLoaded = true;
@@ -83,13 +79,11 @@ public class UIManager : MonoBehaviour
 
     public void LoadLevelOne()
     {
-        Debug.Log("Tu fais le tuto mais en fait c'est le jeu");
         SceneManager.LoadScene("Level 1");
     }
 
     public void ReturnToMainMenu()
     {
-        Debug.Log("Bah alors on ragequit?");
         gameManager.isPaused = false;
         LevelCompleteMenuUI.SetActive(false);
         LevelSelectMenuUI.SetActive(false);
@@ -99,7 +93,6 @@ public class UIManager : MonoBehaviour
 
     public void ResumeGame()
     {
-        Debug.Log("Bon la pause est finie on reprend");
         PauseMenuUI.SetActive(false);
     }
 

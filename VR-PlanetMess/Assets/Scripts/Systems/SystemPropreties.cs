@@ -19,38 +19,32 @@ public class SystemPropreties : MonoBehaviour
     public PlanetData planetData;
 
     [Space(10)]
-    [Header("Planète 1 = petit orbite, Planète 2 = moyen orbite, Planète 3 = grand orbite")]
+    [Header("Planï¿½te 1 = petit orbite, Planï¿½te 2 = moyen orbite, Planï¿½te 3 = grand orbite")]
     [Tooltip("0, petit, 1 moyen, 2 grand")]
     [Range(0, 2)]
     public int planet1Size;
-    [Tooltip("0, froid, 1 tempéré, 2 chaud")]
-    [Range(0, 2)]
-    public int planet1Temp;
-    [Tooltip("0, gazeux, 1 rocheux, 2 aquatique")]
-    [Range(0, 2)]
-    public int planet1Compo;
+    [Tooltip("0, froid, 1 tempï¿½rï¿½, 2 chaud")]
+    [Range(0, 8)]
+    public int planet1TempCompo;
+    
     [Tooltip("0, petit, 1 moyen, 2 grand")]
 
     [Space(10)]
     [Range(0, 2)]
     public int planet2Size;
-    [Tooltip("0, froid, 1 tempéré, 2 chaud")]
-    [Range(0, 2)]
-    public int planet2Temp;
-    [Tooltip("0, gazeux, 1 rocheux, 2 aquatique")]
-    [Range(0, 2)]
-    public int planet2Compo;
+    [Tooltip("0, froid, 1 tempï¿½rï¿½, 2 chaud")]
+    [Range(0, 8)]
+    public int planet2TempCompo;
+    
     [Tooltip("0, petit, 1 moyen, 2 grand")]
 
     [Space(10)]
     [Range(0, 2)]
     public int planet3Size;
-    [Tooltip("0, froid, 1 tempéré, 2 chaud")]
-    [Range(0, 2)]
-    public int planet3Temp;
-    [Tooltip("0, gazeux, 1 rocheux, 2 aquatique")]
-    [Range(0, 2)]
-    public int planet3Compo;
+    [Tooltip("0, froid, 1 tempï¿½rï¿½, 2 chaud")]
+    [Range(0, 8)]
+    public int planet3TempCompo;
+    
 
     private void Start()
     {
@@ -66,24 +60,24 @@ public class SystemPropreties : MonoBehaviour
         //Planets
         GameObject planet1 = Instantiate(planetPrefab, orbit[0].position, Quaternion.identity, orbit[0]);
         planet1.transform.localScale = new Vector3(planetData.size[planet1Size], planetData.size[planet1Size], planetData.size[planet1Size]);
-        planet1.transform.GetComponent<MeshRenderer>().material = planetData.temp[planet1Temp];
+        planet1.transform.GetComponent<MeshRenderer>().material = planetData.temp_compo[planet1TempCompo];
+
         planet1.GetComponent<PlanetScript>().planetSizeIndex = planet1Size;
-        planet1.GetComponent<PlanetScript>().planetTemperatureIndex = planet1Temp;
-        planet1.GetComponent<PlanetScript>().planetCompositionIndex = planet1Compo;
+        planet1.GetComponent<PlanetScript>().planetTempCompoIndex = planet1TempCompo;
 
         GameObject planet2 = Instantiate(planetPrefab, orbit[1].position, Quaternion.identity, orbit[1]);
         planet2.transform.localScale = new Vector3(planetData.size[planet2Size], planetData.size[planet2Size], planetData.size[planet2Size]);
-        planet2.transform.GetComponent<MeshRenderer>().material = planetData.temp[planet2Temp];
+        planet2.transform.GetComponent<MeshRenderer>().material = planetData.temp_compo[planet2TempCompo];
+
         planet2.GetComponent<PlanetScript>().planetSizeIndex = planet2Size;
-        planet2.GetComponent<PlanetScript>().planetTemperatureIndex = planet2Temp;
-        planet2.GetComponent<PlanetScript>().planetCompositionIndex = planet2Compo;
+        planet2.GetComponent<PlanetScript>().planetTempCompoIndex = planet2TempCompo;
 
         GameObject planet3 = Instantiate(planetPrefab, orbit[2].position, Quaternion.identity, orbit[2]);
         planet3.transform.localScale = new Vector3(planetData.size[planet3Size], planetData.size[planet3Size], planetData.size[planet3Size]);
-        planet3.transform.GetComponent<MeshRenderer>().material = planetData.temp[planet3Temp];
+        planet3.transform.GetComponent<MeshRenderer>().material = planetData.temp_compo[planet3TempCompo];
+
         planet3.GetComponent<PlanetScript>().planetSizeIndex = planet3Size;
-        planet3.GetComponent<PlanetScript>().planetTemperatureIndex = planet3Temp;
-        planet3.GetComponent<PlanetScript>().planetCompositionIndex = planet3Compo;
+        planet3.GetComponent<PlanetScript>().planetTempCompoIndex = planet3TempCompo;
 
     }
 
