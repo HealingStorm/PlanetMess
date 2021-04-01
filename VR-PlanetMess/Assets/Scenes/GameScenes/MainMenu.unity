@@ -553,6 +553,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3687463122683550628, guid: 8ff9b3bea7084074286beac59f072f55,
+        type: 3}
+      propertyPath: LevelCompleteMenuUI
+      value: 
+      objectReference: {fileID: 1773957793616488776}
     - target: {fileID: 8364956167966894357, guid: 8ff9b3bea7084074286beac59f072f55,
         type: 3}
       propertyPath: m_Name
@@ -1098,6 +1103,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7892340254848736957, guid: c7c6d893dd70c2a4eba99bf48e20bb08,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1773957793131348829, guid: c7c6d893dd70c2a4eba99bf48e20bb08, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c7c6d893dd70c2a4eba99bf48e20bb08, type: 3}
@@ -1119,3 +1129,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d7cd0436f6734347a7b03101219476e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1773957793616488776 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7892340254848736957, guid: c7c6d893dd70c2a4eba99bf48e20bb08,
+    type: 3}
+  m_PrefabInstance: {fileID: 1773957793616488773}
+  m_PrefabAsset: {fileID: 0}

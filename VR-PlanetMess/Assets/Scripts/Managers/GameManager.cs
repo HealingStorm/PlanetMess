@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
                 {
                     levelCompleted = true;
                     inLevel = false;
-                    //UIManager.Instance.
+                    UIManager.Instance.LevelCompleteMenuUI.SetActive(true);
                     Debug.Log("LEVEL COMPLETE !");
                     break;
                 }
