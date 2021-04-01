@@ -71,11 +71,13 @@ public class UIManager : MonoBehaviour
         LevelSelectMenuUI.SetActive(false);
         RuleMenuUI.SetActive(false);
         MainMenuUI.SetActive(true);
+        controlsMenuUI.SetActive(false);
     }
 
     public void LoadTuto()
     {
         Debug.Log("Tu joues mais en fait c'est le tuto");
+        LevelSelectMenuUI.SetActive(false);
         SceneManager.LoadScene("Jaipeteletuto");
         gameManager.tutoLevelLoaded = true;
     }
@@ -106,5 +108,11 @@ public class UIManager : MonoBehaviour
     public void PlaySoundEffect()
     {
         FindObjectOfType<AudioManager>().Play("UI Select");
+    }
+
+    public void ControlsMenuButton()
+    {
+        controlsMenuUI.SetActive(true);
+        RuleMenuUI.SetActive(false);
     }
 }
