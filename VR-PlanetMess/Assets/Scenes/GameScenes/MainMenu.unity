@@ -481,27 +481,9 @@ MonoBehaviour:
   m_ActionAssets:
   - {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   - {fileID: -944628639613478452, guid: da2b439d1a2de5c46a4f428f8cf4fe19, type: 3}
-<<<<<<< HEAD
---- !u!1 &895587623 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1687577680, guid: c7c6d893dd70c2a4eba99bf48e20bb08,
-    type: 3}
-  m_PrefabInstance: {fileID: 1773957793616488773}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1042002432 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1773957792235495944, guid: c7c6d893dd70c2a4eba99bf48e20bb08,
-    type: 3}
-  m_PrefabInstance: {fileID: 1773957793616488773}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1337392430 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1773957792744971142, guid: c7c6d893dd70c2a4eba99bf48e20bb08,
-=======
 --- !u!224 &1172768073 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5066320976416527004, guid: c7c6d893dd70c2a4eba99bf48e20bb08,
->>>>>>> 4f57d4223c4c010b38d258a52299a84e083ec627
     type: 3}
   m_PrefabInstance: {fileID: 1773957793616488773}
   m_PrefabAsset: {fileID: 0}
@@ -843,12 +825,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecdbf3dc6204e7a46943712ecfb94c12, type: 3}
---- !u!1 &1765450765 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1773957792621732933, guid: c7c6d893dd70c2a4eba99bf48e20bb08,
-    type: 3}
-  m_PrefabInstance: {fileID: 1773957793616488773}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2013478711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -911,26 +887,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3687463122683550628, guid: 8ff9b3bea7084074286beac59f072f55,
-        type: 3}
-      propertyPath: MainMenuUI
-      value: 
-      objectReference: {fileID: 1042002432}
-    - target: {fileID: 3687463122683550628, guid: 8ff9b3bea7084074286beac59f072f55,
-        type: 3}
-      propertyPath: PauseMenuUI
-      value: 
-      objectReference: {fileID: 895587623}
-    - target: {fileID: 3687463122683550628, guid: 8ff9b3bea7084074286beac59f072f55,
-        type: 3}
-      propertyPath: OptionsMenuUI
-      value: 
-      objectReference: {fileID: 1337392430}
-    - target: {fileID: 3687463122683550628, guid: 8ff9b3bea7084074286beac59f072f55,
-        type: 3}
-      propertyPath: LevelSelectMenuUI
-      value: 
-      objectReference: {fileID: 1765450765}
     - target: {fileID: 3687463122683550628, guid: 8ff9b3bea7084074286beac59f072f55,
         type: 3}
       propertyPath: LevelCompleteMenuUI
