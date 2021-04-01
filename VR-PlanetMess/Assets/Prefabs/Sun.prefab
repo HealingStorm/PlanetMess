@@ -109,3 +109,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 3
+  playerDeath: {fileID: 1717954561962503725, guid: 2b67cef1b2f42df469487169d1019fb7,
+    type: 3}
+  deathVfx: {fileID: 100004, guid: 6e8c7c425e5bc374daf95a774767b1e3, type: 3}
