@@ -20,6 +20,7 @@ TagManager:
   - LeftHand
   - PauseMenu
   - LevelComplete
+  - ControlsMenuUI
   layers:
   - Default
   - TransparentFX

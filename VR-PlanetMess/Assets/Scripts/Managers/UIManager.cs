@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     private GameObject MainMenuUI;
     private GameObject LevelSelectMenuUI;
     private GameObject PauseMenuUI;
+    private GameObject controlsMenuUI;
     [HideInInspector]
     public GameObject LevelCompleteMenuUI;
     #region Singlton:Profile
@@ -20,23 +21,28 @@ public class UIManager : MonoBehaviour
     {
         if (Instance == null)
             Instance = this;
-        else
+        else {
             Destroy(gameObject);
-    }
-    #endregion
-    private void Start() 
-    {
+        }
+
         gameManager = FindObjectOfType<GameManager>();
         RuleMenuUI = GameObject.FindGameObjectWithTag("OptionMenuUI");
         MainMenuUI = GameObject.FindGameObjectWithTag("MainMenuUI");
         LevelSelectMenuUI = GameObject.FindGameObjectWithTag("LevelSelectMenuUI");
         PauseMenuUI = GameObject.FindGameObjectWithTag("PauseMenu");
         LevelCompleteMenuUI = GameObject.FindGameObjectWithTag("LevelComplete");
+        controlsMenuUI = GameObject.FindGameObjectWithTag("ControlsMenuUI");
 
+    }
+    #endregion
+    private void Start() 
+    {
         MainMenuUI.SetActive(true);
         RuleMenuUI.SetActive(false);
         LevelSelectMenuUI.SetActive(false);
-
+        PauseMenuUI.SetActive(false);
+        LevelCompleteMenuUI.SetActive(false);
+        controlsMenuUI.SetActive(false);
     }
 
     public void Play()
@@ -70,7 +76,7 @@ public class UIManager : MonoBehaviour
     public void LoadTuto()
     {
         Debug.Log("Tu joues mais en fait c'est le tuto");
-        SceneManager.LoadScene("TutorialLevel");
+        SceneManager.LoadScene("Jaipeteletuto");
         gameManager.tutoLevelLoaded = true;
     }
 
