@@ -465,7 +465,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-54270
+  m_Name: pb_Mesh-137410
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -659,7 +659,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-201960
+  m_Name: pb_Mesh-137222
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -853,7 +853,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-54304
+  m_Name: pb_Mesh-164794
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1047,7 +1047,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-54400
+  m_Name: pb_Mesh-164890
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1241,7 +1241,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-54136
+  m_Name: pb_Mesh-164626
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1763,7 +1763,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-54046
+  m_Name: pb_Mesh-137186
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2355,7 +2355,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1645271208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2978,6 +2978,11 @@ PrefabInstance:
       propertyPath: planet2TempCompo
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4086297243355431253, guid: e8228709419e02c47b1010c1c6142b7b,
+        type: 3}
+      propertyPath: planet3TempCompo
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4646142320839960865, guid: e8228709419e02c47b1010c1c6142b7b,
         type: 3}
       propertyPath: m_Name
@@ -3090,8 +3095,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5368626918002416268, guid: e8228709419e02c47b1010c1c6142b7b,
         type: 3}
+      propertyPath: planet2Size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5368626918002416268, guid: e8228709419e02c47b1010c1c6142b7b,
+        type: 3}
       propertyPath: planet3Size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5368626918002416268, guid: e8228709419e02c47b1010c1c6142b7b,
+        type: 3}
+      propertyPath: planet1TempCompo
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5368626918002416268, guid: e8228709419e02c47b1010c1c6142b7b,
         type: 3}

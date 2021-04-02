@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class SystemPropreties : MonoBehaviour
 {
-    [HideInInspector]
     public bool[] orbitDone = new bool[3];
     public GameObject sunPrefab;
     public SunData sunData;
     [Tooltip("0, petit, 1 moyen, 2 grand")]
-    [Range(0,2)]
+    [Range(0, 2)]
     public int sunSize;
 
     private Transform[] orbit = new Transform[3];
@@ -26,7 +25,7 @@ public class SystemPropreties : MonoBehaviour
     [Tooltip("0, froid, 1 temp�r�, 2 chaud")]
     [Range(0, 8)]
     public int planet1TempCompo;
-    
+
     [Tooltip("0, petit, 1 moyen, 2 grand")]
 
     [Space(10)]
@@ -35,7 +34,7 @@ public class SystemPropreties : MonoBehaviour
     [Tooltip("0, froid, 1 temp�r�, 2 chaud")]
     [Range(0, 8)]
     public int planet2TempCompo;
-    
+
     [Tooltip("0, petit, 1 moyen, 2 grand")]
 
     [Space(10)]
@@ -44,7 +43,9 @@ public class SystemPropreties : MonoBehaviour
     [Tooltip("0, froid, 1 temp�r�, 2 chaud")]
     [Range(0, 8)]
     public int planet3TempCompo;
-    
+
+    private bool bol = true;
+
 
     private void Start()
     {

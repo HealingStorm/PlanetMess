@@ -533,6 +533,11 @@ PrefabInstance:
       propertyPath: controllerManager
       value: 
       objectReference: {fileID: 975338166}
+    - target: {fileID: 3635083476252477427, guid: 8ff9b3bea7084074286beac59f072f55,
+        type: 3}
+      propertyPath: orbitsDone.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6502394920408093748, guid: 8ff9b3bea7084074286beac59f072f55,
         type: 3}
       propertyPath: m_LocalPosition.z
