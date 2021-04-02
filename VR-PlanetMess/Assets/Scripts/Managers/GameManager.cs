@@ -26,10 +26,6 @@ public class GameManager : MonoBehaviour
     private GameObject[] levelSystems;
     private bool[] orbitsDone = new bool[3];
 
-    //[HideInInspector]
-    public bool dropSecurity;
-    //[HideInInspector]
-    public bool takeSecurity;
 
     [HideInInspector]
     public UIManager UIManager;
@@ -37,6 +33,7 @@ public class GameManager : MonoBehaviour
     public bool isDead = false;
 
     public static GameManager Instance;
+
 
     #region Singlton:Profile
 
@@ -71,6 +68,7 @@ public class GameManager : MonoBehaviour
 
         }
         playerInputs.XRILeftHand.PauseGame.started += OnPause;
+
     }
     public void CheckAllSystemsOrbits()
     {
@@ -110,15 +108,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void OnPlanetDrop()
-    {
-        dropSecurity = true;
-    }
 
-    public void OnPlanetTake()
-    {
-        takeSecurity = true;
-    }
 
     public void OnPause(InputAction.CallbackContext context) 
     {   

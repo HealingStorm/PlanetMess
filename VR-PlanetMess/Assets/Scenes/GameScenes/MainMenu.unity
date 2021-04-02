@@ -222,6 +222,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &975338166 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 502342292, guid: ecdbf3dc6204e7a46943712ecfb94c12,
+    type: 3}
+  m_PrefabInstance: {fileID: 1694337280}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c5c5d0bdefe3d14482446511d7b4a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1054174386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -343,6 +355,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 502342292, guid: ecdbf3dc6204e7a46943712ecfb94c12, type: 3}
+      propertyPath: m_InteractState.m_OnEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 502342292, guid: ecdbf3dc6204e7a46943712ecfb94c12, type: 3}
       propertyPath: m_InteractState.m_OnExit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2013478712}
@@ -357,6 +373,14 @@ PrefabInstance:
     - target: {fileID: 502342292, guid: ecdbf3dc6204e7a46943712ecfb94c12, type: 3}
       propertyPath: m_InteractState.m_OnEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnPlanetTake
+      objectReference: {fileID: 0}
+    - target: {fileID: 502342292, guid: ecdbf3dc6204e7a46943712ecfb94c12, type: 3}
+      propertyPath: m_InteractState.m_OnEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1670256624, guid: ecdbf3dc6204e7a46943712ecfb94c12, type: 3}
+      propertyPath: m_TagString
+      value: RightHand
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503725, guid: ecdbf3dc6204e7a46943712ecfb94c12,
         type: 3}
@@ -504,6 +528,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3635083476252477427, guid: 8ff9b3bea7084074286beac59f072f55,
+        type: 3}
+      propertyPath: controllerManager
+      value: 
+      objectReference: {fileID: 975338166}
     - target: {fileID: 6502394920408093748, guid: 8ff9b3bea7084074286beac59f072f55,
         type: 3}
       propertyPath: m_LocalPosition.z

@@ -16,10 +16,30 @@ public class PlanetScript : MonoBehaviour
     public Material orbitValidMaterial;
     public Material orbitNeutralMaterial;
 
+    public bool onOrbit = true;
+    private GameObject lastOrbitMat;
+
+    //[HideInInspector]
+    public bool dropSecurity;
+    //[HideInInspector]
+    public bool takeSecurity;
+
 
     private void Awake()
     {
         gameManager = FindObjectOfType<GameManager>();
+        if (transform.parent.name == "Small Orbit Planet")
+        {
+            lastOrbitMat = transform.parent.parent.Find("OrbitSmall").gameObject;
+        }
+        if (transform.parent.name == "Medium Orbit Planet")
+        {
+            lastOrbitMat = transform.parent.parent.Find("OrbitMedium").gameObject;
+        }
+        if (transform.parent.name == "Big Orbit Planet")
+        {
+            lastOrbitMat = transform.parent.parent.Find("OrbitBig").gameObject;
+        }
     }
     private void Start()
     {
@@ -28,7 +48,7 @@ public class PlanetScript : MonoBehaviour
         {
             cantGoInSystem[0] = true;
         }
-        if(planetSizeIndex == 0 || planetTempCompoIndex == 0 || planetTempCompoIndex == 1 || planetTempCompoIndex == 2)
+        if (planetSizeIndex == 0 || planetTempCompoIndex == 0 || planetTempCompoIndex == 1 || planetTempCompoIndex == 2)
         {
             cantGoInSystem[1] = true;
         }
@@ -42,27 +62,44 @@ public class PlanetScript : MonoBehaviour
     private void Update()
     {
         //si on prend la plan�te
-        if (gameManager.takeSecurity == true)
+        if (takeSecurity == true)
         {
-            gameManager.takeSecurity = false;
+            onOrbit = false;
+            lastOrbitMat.GetComponent<MeshRenderer>().material = orbitNeutralMaterial;
+            takeSecurity = false;
         }
 
     }
 
+    private void OntriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "RightHand")
+        {
+            takeSecurity = true;
+        }
+    }
+    private void OntriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "RightHand")
+        {
+            dropSecurity = true;
+        }
+    }
     private void OnTriggerStay(Collider other)
     {
-        
+
         #region Check si la plan�te peut aller sur l'orbite
         //PETIT SOLEIL
         if (other.gameObject.tag == "SmallOrbit")
         {
             SystemPropreties SystemPropretiesScript = other.transform.parent.parent.parent.GetComponent<SystemPropreties>();
-            if (SystemPropretiesScript.sunSize == 0 && cantGoInSystem[0] != true)
+            if (SystemPropretiesScript.sunSize == 0 && cantGoInSystem[0] != true && onOrbit == true)
             {
+                lastOrbitMat.GetComponent<MeshRenderer>().material = other.transform.parent.GetComponent<MeshRenderer>().material;
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitValidMaterial;
                 other.transform.parent.parent.parent.GetComponent<SystemPropreties>().orbitDone[0] = true;
             }
-            else if (SystemPropretiesScript.sunSize == 0 && cantGoInSystem[0] == true)
+            else if (SystemPropretiesScript.sunSize == 0 && cantGoInSystem[0] == true && onOrbit == true)
             {
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitNeutralMaterial;
                 other.transform.parent.parent.parent.GetComponent<SystemPropreties>().orbitDone[0] = false;
@@ -71,12 +108,13 @@ public class PlanetScript : MonoBehaviour
         if (other.gameObject.tag == "MediumOrbit")
         {
             SystemPropreties SystemPropretiesScript = other.transform.parent.parent.parent.GetComponent<SystemPropreties>();
-            if (SystemPropretiesScript.sunSize == 0 && cantGoInSystem[0] != true)
+            if (SystemPropretiesScript.sunSize == 0 && cantGoInSystem[0] != true && onOrbit == true)
             {
+                lastOrbitMat.GetComponent<MeshRenderer>().material = other.transform.parent.GetComponent<MeshRenderer>().material;
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitValidMaterial;
                 other.transform.parent.parent.parent.GetComponent<SystemPropreties>().orbitDone[1] = true;
             }
-            else if (SystemPropretiesScript.sunSize == 0 && cantGoInSystem[0] == true)
+            else if (SystemPropretiesScript.sunSize == 0 && cantGoInSystem[0] == true && onOrbit == true)
             {
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitNeutralMaterial;
                 other.transform.parent.parent.parent.GetComponent<SystemPropreties>().orbitDone[1] = false;
@@ -85,12 +123,13 @@ public class PlanetScript : MonoBehaviour
         if (other.gameObject.tag == "BigOrbit")
         {
             SystemPropreties SystemPropretiesScript = other.transform.parent.parent.parent.GetComponent<SystemPropreties>();
-            if (SystemPropretiesScript.sunSize == 0 && cantGoInSystem[0] != true)
+            if (SystemPropretiesScript.sunSize == 0 && cantGoInSystem[0] != true && onOrbit == true)
             {
+                lastOrbitMat.GetComponent<MeshRenderer>().material = other.transform.parent.GetComponent<MeshRenderer>().material;
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitValidMaterial;
                 other.transform.parent.parent.parent.GetComponent<SystemPropreties>().orbitDone[2] = true;
             }
-            else if (SystemPropretiesScript.sunSize == 0 && cantGoInSystem[0] == true)
+            else if (SystemPropretiesScript.sunSize == 0 && cantGoInSystem[0] == true && onOrbit == true)
             {
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitNeutralMaterial;
                 other.transform.parent.parent.parent.GetComponent<SystemPropreties>().orbitDone[2] = false;
@@ -100,12 +139,13 @@ public class PlanetScript : MonoBehaviour
         if (other.gameObject.tag == "SmallOrbit")
         {
             SystemPropreties SystemPropretiesScript = other.transform.parent.parent.parent.GetComponent<SystemPropreties>();
-            if (SystemPropretiesScript.sunSize == 1 && cantGoInSystem[1] != true)
+            if (SystemPropretiesScript.sunSize == 1 && cantGoInSystem[1] != true && onOrbit == true)
             {
+                lastOrbitMat.GetComponent<MeshRenderer>().material = other.transform.parent.GetComponent<MeshRenderer>().material;
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitValidMaterial;
                 other.transform.parent.parent.parent.GetComponent<SystemPropreties>().orbitDone[0] = true;
             }
-            else if (SystemPropretiesScript.sunSize == 1 && cantGoInSystem[1] == true)
+            else if (SystemPropretiesScript.sunSize == 1 && cantGoInSystem[1] == true && onOrbit == true)
             {
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitNeutralMaterial;
                 other.transform.parent.parent.parent.GetComponent<SystemPropreties>().orbitDone[0] = false;
@@ -114,12 +154,13 @@ public class PlanetScript : MonoBehaviour
         if (other.gameObject.tag == "MediumOrbit")
         {
             SystemPropreties SystemPropretiesScript = other.transform.parent.parent.parent.GetComponent<SystemPropreties>();
-            if (SystemPropretiesScript.sunSize == 1 && cantGoInSystem[1] != true)
+            if (SystemPropretiesScript.sunSize == 1 && cantGoInSystem[1] != true && onOrbit == true)
             {
+                lastOrbitMat.GetComponent<MeshRenderer>().material = other.transform.parent.GetComponent<MeshRenderer>().material;
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitValidMaterial;
                 other.transform.parent.parent.parent.GetComponent<SystemPropreties>().orbitDone[1] = true;
             }
-            else if (SystemPropretiesScript.sunSize == 1 && cantGoInSystem[1] == true)
+            else if (SystemPropretiesScript.sunSize == 1 && cantGoInSystem[1] == true && onOrbit == true)
             {
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitNeutralMaterial;
                 other.transform.parent.parent.parent.GetComponent<SystemPropreties>().orbitDone[1] = false;
@@ -128,12 +169,13 @@ public class PlanetScript : MonoBehaviour
         if (other.gameObject.tag == "BigOrbit")
         {
             SystemPropreties SystemPropretiesScript = other.transform.parent.parent.parent.GetComponent<SystemPropreties>();
-            if (SystemPropretiesScript.sunSize == 1 && cantGoInSystem[1] != true)
+            if (SystemPropretiesScript.sunSize == 1 && cantGoInSystem[1] != true && onOrbit == true)
             {
+                lastOrbitMat.GetComponent<MeshRenderer>().material = other.transform.parent.GetComponent<MeshRenderer>().material;
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitValidMaterial;
                 other.transform.parent.parent.parent.GetComponent<SystemPropreties>().orbitDone[2] = true;
             }
-            else if (SystemPropretiesScript.sunSize == 1 && cantGoInSystem[1] == true)
+            else if (SystemPropretiesScript.sunSize == 1 && cantGoInSystem[1] == true && onOrbit == true)
             {
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitNeutralMaterial;
                 other.transform.parent.parent.parent.GetComponent<SystemPropreties>().orbitDone[2] = false;
@@ -143,12 +185,13 @@ public class PlanetScript : MonoBehaviour
         if (other.gameObject.tag == "SmallOrbit")
         {
             SystemPropreties SystemPropretiesScript = other.transform.parent.parent.parent.GetComponent<SystemPropreties>();
-            if (SystemPropretiesScript.sunSize == 2 && cantGoInSystem[2] != true)
+            if (SystemPropretiesScript.sunSize == 2 && cantGoInSystem[2] != true && onOrbit == true)
             {
+                lastOrbitMat.GetComponent<MeshRenderer>().material = other.transform.parent.GetComponent<MeshRenderer>().material;
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitValidMaterial;
                 other.transform.parent.parent.parent.GetComponent<SystemPropreties>().orbitDone[0] = true;
             }
-            else if (SystemPropretiesScript.sunSize == 2 && cantGoInSystem[2] == true)
+            else if (SystemPropretiesScript.sunSize == 2 && cantGoInSystem[2] == true && onOrbit == true)
             {
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitNeutralMaterial;
                 other.transform.parent.parent.parent.GetComponent<SystemPropreties>().orbitDone[0] = false;
@@ -157,12 +200,13 @@ public class PlanetScript : MonoBehaviour
         if (other.gameObject.tag == "MediumOrbit")
         {
             SystemPropreties SystemPropretiesScript = other.transform.parent.parent.parent.GetComponent<SystemPropreties>();
-            if (SystemPropretiesScript.sunSize == 2 && cantGoInSystem[2] != true)
+            if (SystemPropretiesScript.sunSize == 2 && cantGoInSystem[2] != true && onOrbit == true)
             {
+                lastOrbitMat.GetComponent<MeshRenderer>().material = other.transform.parent.GetComponent<MeshRenderer>().material;
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitValidMaterial;
                 other.transform.parent.parent.parent.GetComponent<SystemPropreties>().orbitDone[1] = true;
             }
-            else if (SystemPropretiesScript.sunSize == 2 && cantGoInSystem[2] == true)
+            else if (SystemPropretiesScript.sunSize == 2 && cantGoInSystem[2] == true && onOrbit == true)
             {
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitNeutralMaterial;
                 other.transform.parent.parent.parent.GetComponent<SystemPropreties>().orbitDone[1] = false;
@@ -171,25 +215,25 @@ public class PlanetScript : MonoBehaviour
         if (other.gameObject.tag == "BigOrbit")
         {
             SystemPropreties SystemPropretiesScript = other.transform.parent.parent.parent.GetComponent<SystemPropreties>();
-            if (SystemPropretiesScript.sunSize == 2 && cantGoInSystem[2] != true)
+            if (SystemPropretiesScript.sunSize == 2 && cantGoInSystem[2] != true && onOrbit == true)
             {
+                lastOrbitMat.GetComponent<MeshRenderer>().material = other.transform.parent.GetComponent<MeshRenderer>().material;
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitValidMaterial;
                 other.transform.parent.parent.parent.GetComponent<SystemPropreties>().orbitDone[2] = true;
             }
-            else if (SystemPropretiesScript.sunSize == 2 && cantGoInSystem[2] == true)
+            else if (SystemPropretiesScript.sunSize == 2 && cantGoInSystem[2] == true && onOrbit == true)
             {
                 other.transform.parent.GetComponent<MeshRenderer>().material = orbitNeutralMaterial;
                 other.transform.parent.parent.parent.GetComponent<SystemPropreties>().orbitDone[2] = false;
             }
         }
         #endregion
-        
+
         #region Snap des plan�tes sur un orbite
 
         //si on drop la plan�te
-        if (gameManager.dropSecurity == true)
+        if (dropSecurity == true)
         {
-            Debug.Log("bruh");
             if (other.gameObject.tag == "SmallOrbit")
             {
                 Debug.Log("smallorbit");
@@ -197,10 +241,15 @@ public class PlanetScript : MonoBehaviour
                 //Si on a aucun enfant on peut placer la plan�te qui a collid�
                 if (smallOrbitTransform.childCount == 0)
                 {
-                    Debug.Log("snap");
+                    onOrbit = true;
                     transform.parent = smallOrbitTransform;
                     transform.position = smallOrbitTransform.position;
-                    gameManager.dropSecurity = false;
+                    dropSecurity = false;
+                }
+                else
+                {
+                    onOrbit = false;
+                    dropSecurity = false;
                 }
             }
             else if (other.gameObject.tag == "MediumOrbit")
@@ -210,9 +259,15 @@ public class PlanetScript : MonoBehaviour
                 //Si on a aucun enfant on peut placer la plan�te qui a collid�
                 if (mediumOrbitTransform.childCount == 0)
                 {
+                    onOrbit = true;
                     transform.parent = mediumOrbitTransform;
                     transform.position = mediumOrbitTransform.position;
-                    gameManager.dropSecurity = false;
+                    dropSecurity = false;
+                }
+                else
+                {
+                    onOrbit = false;
+                    dropSecurity = false;
                 }
             }
             else if (other.gameObject.tag == "BigOrbit")
@@ -222,17 +277,22 @@ public class PlanetScript : MonoBehaviour
                 //Si on a aucun enfant on peut placer la plan�te qui a collid�
                 if (bigOrbitTransform.childCount == 0)
                 {
+                    onOrbit = true;
                     transform.parent = bigOrbitTransform;
                     transform.position = bigOrbitTransform.position;
-                    gameManager.dropSecurity = false;
+                    dropSecurity = false;
+                }
+                else
+                {
+                    onOrbit = false;
+                    dropSecurity = false;
                 }
             }
             else
             {
-                Debug.Log("rien");
-                gameManager.dropSecurity = false;
+                onOrbit = false;
+                dropSecurity = false;
             }
-            gameManager.dropSecurity = false;
         }
         #endregion
 

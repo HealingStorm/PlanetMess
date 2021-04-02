@@ -43,6 +43,9 @@ public class UIManager : MonoBehaviour
         LevelCompleteMenuUI.SetActive(false);
         controlsMenuUI.SetActive(false);
 
+        Play();
+        LoadTuto();
+
     }
 
     public void Play()
